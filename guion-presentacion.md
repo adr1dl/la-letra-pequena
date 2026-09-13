@@ -76,7 +76,8 @@ Portada con el nombre grande y el claim: *«La letra pequeña de tu contrato es 
 5. **Cómo trabajamos** — los cuatro pasos, del primer papel a la vista.
 6. **Contacto** — dirección, teléfono, dos correos (uno en italiano) y horario.
 
-### Las cuatro decisiones de diseño que puedes defender
+### Las cinco decisiones de diseño que puedes defender
+- **La tipografía la elige el oficio, no el gusto.** Los títulos y las citas van en **EB Garamond**: el garamond es la letra con la que se imprime el libro jurídico europeo desde el siglo XVI. La prosa va en **Alegreya Sans**, humanista y cálida, pensada para leer seguido. Y los cargos, el menú y las etiquetas van en **versalitas** —esas mayúsculas de tamaño reducido— que es el recurso clásico del documento legal. La primera versión usaba una letra monoespaciada, de máquina de escribir, y sonaba más a terminal de ordenador que a despacho.
 - **El nombre es el diseño.** «la letra pequeña» va en minúscula, y el subtítulo de la portada está escrito en letra pequeña de verdad. La forma dice lo mismo que el texto.
 - **La página está maquetada como un contrato anotado a mano.** A la izquierda de cada sección hay una columna estrecha, en tipografía de máquina de escribir, con las normas aplicables: el artículo 51 del Estatuto, el Reglamento 883/2004, el *Codice Civile*… Es la marginalia, las notas al margen que un abogado escribe en el papel. Y las frases importantes van con un **subrayado amarillo de marcador**, como quien subraya la cláusula que no le cuadra.
 - **No hay fotos de los abogados.** En su lugar, cada uno tiene un recuadro con sus iniciales en minúscula. Es una decisión honesta: el despacho es inventado, así que no ponemos caras que no existen.

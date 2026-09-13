@@ -95,6 +95,7 @@ Si te la piden impresa o en PDF:
 
 ## 🎨 Las decisiones de diseño, por si te preguntan
 
+- **La tipografía es la del oficio.** Títulos y citas en **EB Garamond**, la letra con la que se imprime el libro jurídico europeo; la prosa en **Alegreya Sans**, humanista y pensada para leer seguido; y los cargos, el menú y las etiquetas en **versalitas**, el recurso clásico del documento legal.
 - **El nombre es el argumento.** «la letra pequeña» es lo que nadie lee del contrato y lo que acaba decidiendo el caso. Va escrito en minúscula, y en la portada el subtítulo está escrito **literalmente en letra pequeña**.
 - **La página está maquetada como un contrato anotado a mano.** A la izquierda de cada sección hay una columna estrecha en tipografía de máquina de escribir con las normas aplicables —artículo 51 del Estatuto de los Trabajadores, Reglamento (CE) 883/2004, *Codice Civile*…—: son las notas al margen. Las frases importantes llevan un **subrayado amarillo de marcador**.
 - **No hay fotos de los abogados**, solo un recuadro con sus iniciales. Es una decisión honesta: el despacho no existe, así que no se le ponen caras reales a personas inventadas.

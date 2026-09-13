@@ -14,7 +14,7 @@
 <title>la letra pequeña</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,300;1,6..72,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Caveat:wght@500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Alegreya+Sans+SC:wght@400;500;700&family=Caveat:wght@500&display=swap">
 
 <style>
   /* ============================================================
@@ -46,9 +46,13 @@
     --anno:         #A63A2A;
     --on-ink:       #F4F4F0;
 
-    --f-display: "Newsreader", "Iowan Old Style", Georgia, serif;
-    --f-body:    "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
-    --f-mono:    "IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+    /* Garamond para lo editorial: es la letra del libro jurídico europeo.
+       Alegreya Sans, humanista y cálida, para la prosa de servicio.
+       Versalitas para cargos y etiquetas: el recurso del documento legal,
+       donde antes había una monoespaciada que sonaba a terminal. */
+    --f-display: "EB Garamond", "Iowan Old Style", Georgia, serif;
+    --f-body:    "Alegreya Sans", "Segoe UI", system-ui, sans-serif;
+    --f-sc:      "Alegreya Sans SC", "Alegreya Sans", system-ui, sans-serif;
     --f-hand:    "Caveat", "Segoe Script", cursive;
 
     --measure: min(63ch, 100%);
@@ -99,9 +103,9 @@
     background: var(--paper);
     color: var(--ink);
     font-family: var(--f-body);
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 1.65;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 1.62;
     -webkit-font-smoothing: antialiased;
     /* Una palabra larguísima (un nombre de ley) no debe desbordar en móvil. */
     overflow-wrap: break-word;
@@ -163,7 +167,7 @@
 
   .wordmark {
     font-family: var(--f-display);
-    font-size: 1.05rem;
+    font-size: 1.14rem;
     letter-spacing: .01em;
     text-transform: lowercase;
     text-decoration: none;
@@ -175,11 +179,10 @@
 
   nav {
     display: flex;
-    gap: 1.4rem;
-    font-family: var(--f-mono);
-    font-size: .69rem;
-    letter-spacing: .09em;
-    text-transform: uppercase;
+    gap: 1.5rem;
+    font-family: var(--f-sc);
+    font-size: .93rem;
+    letter-spacing: .045em;
     /* En pantallas estrechas el menú se desliza en horizontal dentro de su
        caja, en lugar de romper en tres filas y engordar la barra. */
     overflow-x: auto;
@@ -225,9 +228,9 @@
   /* ---------- 5. Marginalia ---------------------------------------------- */
 
   .rail {
-    font-family: var(--f-mono);
-    font-size: .7rem;
-    line-height: 1.55;
+    font-family: var(--f-body);
+    font-size: .83rem;
+    line-height: 1.5;
     color: var(--ink-faint);
   }
 
@@ -236,11 +239,11 @@
 
   .rail .tag {
     display: block;
+    font-family: var(--f-sc);
     color: var(--ink-soft);
     font-weight: 500;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    font-size: .655rem;
+    letter-spacing: .07em;
+    font-size: .9rem;
     margin-bottom: 1.05rem;
     padding-bottom: .5rem;
     border-bottom: 1px solid var(--rule);
@@ -263,7 +266,7 @@
 
   h2 {
     font-family: var(--f-display);
-    font-size: clamp(1.8rem, 4.2vw, 2.6rem);
+    font-size: clamp(2rem, 4.6vw, 2.95rem);
     line-height: 1.12;
     letter-spacing: -.015em;
     margin-bottom: 1rem;
@@ -271,13 +274,13 @@
 
   h3 {
     font-family: var(--f-display);
-    font-size: 1.32rem;
+    font-size: 1.5rem;
     line-height: 1.2;
   }
 
   .lede {
     font-family: var(--f-display);
-    font-size: clamp(1.12rem, 2vw, 1.3rem);
+    font-size: clamp(1.2rem, 2.1vw, 1.45rem);
     line-height: 1.5;
     color: var(--ink-soft);
     max-width: var(--measure);
@@ -299,12 +302,12 @@
     display: inline-flex;
     align-items: center;
     gap: .5rem;
-    font-family: var(--f-mono);
-    font-size: .72rem;
-    letter-spacing: .09em;
-    text-transform: uppercase;
+    font-family: var(--f-sc);
+    font-size: .97rem;
+    font-weight: 500;
+    letter-spacing: .05em;
     text-decoration: none;
-    padding: .8rem 1.35rem;
+    padding: .72rem 1.35rem;
     border: 1px solid var(--ink);
     transition: background-color .15s ease, color .15s ease, transform .12s ease;
   }
@@ -334,7 +337,7 @@
 
   .hero-mark {
     font-family: var(--f-display);
-    font-size: clamp(2.7rem, 10vw, 5.2rem);
+    font-size: clamp(3rem, 11vw, 6rem);
     line-height: .95;
     letter-spacing: -.035em;
     text-transform: lowercase;
@@ -354,7 +357,7 @@
 
   .hero-claim {
     font-family: var(--f-display);
-    font-size: clamp(1.2rem, 2.6vw, 1.6rem);
+    font-size: clamp(1.3rem, 2.8vw, 1.78rem);
     line-height: 1.42;
     max-width: min(32ch, 100%);
     margin: 0 0 1.3rem;
@@ -370,11 +373,10 @@
     display: flex;
     flex-wrap: wrap;
     gap: .4rem .75rem;
-    font-family: var(--f-mono);
-    font-size: .69rem;
-    letter-spacing: .05em;
+    font-family: var(--f-sc);
+    font-size: .93rem;
+    letter-spacing: .045em;
     color: var(--ink-faint);
-    text-transform: uppercase;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -400,10 +402,9 @@
   }
 
   .clause-head {
-    font-family: var(--f-mono);
-    font-size: .6rem;
-    letter-spacing: .14em;
-    text-transform: uppercase;
+    font-family: var(--f-sc);
+    font-size: .88rem;
+    letter-spacing: .08em;
     color: var(--ink-faint);
     padding-bottom: .7rem;
     margin-bottom: .9rem;
@@ -412,8 +413,8 @@
 
   .clause-body {
     font-family: var(--f-display);
-    font-size: .72rem;      /* la letra pequeña, literal */
-    line-height: 1.72;
+    font-size: .83rem;      /* la letra pequeña, literal */
+    line-height: 1.62;
     color: var(--ink-soft);
     text-align: justify;
     margin: 0;
@@ -432,16 +433,16 @@
   }
 
   .clause-note .arrow {
-    font-family: var(--f-mono);
     color: var(--anno);
     font-size: .9rem;
     line-height: 1.5;
   }
 
   .clause-cite {
-    font-family: var(--f-mono);
-    font-size: .62rem;
-    line-height: 1.6;
+    font-family: var(--f-body);
+    font-style: italic;
+    font-size: .8rem;
+    line-height: 1.5;
     color: var(--ink-faint);
     margin: .9rem 0 0;
     max-width: none;
@@ -449,7 +450,7 @@
 
   @media (max-width: 900px) {
     .clause { box-shadow: 4px 4px 0 var(--paper-deep); }
-    .clause-body { text-align: left; font-size: .74rem; }
+    .clause-body { text-align: left; font-size: .85rem; }
   }
 
   /* ---------- 10. Áreas de trabajo --------------------------------------- */
@@ -496,10 +497,13 @@
     padding: 0;
   }
 
-  .roster li { border-bottom: 1px solid var(--rule-soft); }
+  .roster li {
+    display: flex;
+    border-bottom: 1px solid var(--rule-soft);
+  }
 
   .roster a {
-    display: block;
+    flex: 1;
     padding: .8rem 1rem .85rem 0;
     text-decoration: none;
     transition: background-color .15s ease;
@@ -513,17 +517,16 @@
   .roster .r-name {
     display: block;
     font-family: var(--f-display);
-    font-size: 1.02rem;
+    font-size: 1.1rem;
     text-transform: lowercase;
     line-height: 1.25;
   }
 
   .roster .r-area {
     display: block;
-    font-family: var(--f-mono);
-    font-size: .63rem;
-    letter-spacing: .07em;
-    text-transform: uppercase;
+    font-family: var(--f-sc);
+    font-size: .85rem;
+    letter-spacing: .045em;
     color: var(--ink-faint);
     margin-top: .2rem;
   }
@@ -560,17 +563,17 @@
 
   .lawyer-name {
     font-family: var(--f-display);
-    font-size: 1.4rem;
+    font-size: 1.58rem;
     line-height: 1.15;
     text-transform: lowercase;
     margin-bottom: .15rem;
   }
 
   .lawyer-role {
-    font-family: var(--f-mono);
-    font-size: .69rem;
-    letter-spacing: .08em;
-    text-transform: uppercase;
+    font-family: var(--f-sc);
+    font-size: .95rem;
+    font-weight: 500;
+    letter-spacing: .045em;
     color: var(--anno);
     margin: 0 0 .8rem;
   }
@@ -584,7 +587,7 @@
   .lawyer-voice {
     font-family: var(--f-display);
     font-style: italic;
-    font-size: 1.02rem;
+    font-size: 1.12rem;
     line-height: 1.5;
     color: var(--ink-soft);
     max-width: min(52ch, 100%);
@@ -600,10 +603,9 @@
     margin: 0;
     padding: 0;
     list-style: none;
-    font-family: var(--f-mono);
-    font-size: .645rem;
-    letter-spacing: .06em;
-    text-transform: uppercase;
+    font-family: var(--f-sc);
+    font-size: .855rem;
+    letter-spacing: .035em;
   }
 
   .facts li {
@@ -632,7 +634,7 @@
       border-top-width: 2px;
     }
 
-    .lawyer-name { font-size: 1.22rem; }
+    .lawyer-name { font-size: 1.35rem; }
   }
 
   /* En pantallas anchas la cabecera se disuelve (display:contents) y sus dos
@@ -669,10 +671,9 @@
   }
 
   .bridge-col h4 {
-    font-family: var(--f-mono);
-    font-size: .69rem;
-    letter-spacing: .1em;
-    text-transform: uppercase;
+    font-family: var(--f-sc);
+    font-size: .97rem;
+    letter-spacing: .06em;
     color: var(--ink-faint);
     padding-bottom: .5rem;
     margin-bottom: .8rem;
@@ -696,8 +697,9 @@
 
   .bridge-col code {
     display: block;
-    font-family: var(--f-mono);
-    font-size: .68rem;
+    font-family: var(--f-display);
+    font-style: italic;
+    font-size: .92rem;
     color: var(--ink-faint);
     margin-top: .25rem;
   }
@@ -718,7 +720,7 @@
 
   .case blockquote {
     font-family: var(--f-display);
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     line-height: 1.45;
     margin: 0 0 1rem;
     text-indent: -.4em;
@@ -734,17 +736,21 @@
   }
 
   .case-file {
-    font-family: var(--f-mono);
-    font-size: .645rem;
-    letter-spacing: .05em;
+    font-family: var(--f-body);
+    font-size: .84rem;
     color: var(--ink-faint);
     margin: 0;
     padding-top: .55rem;
     border-top: 1px solid var(--rule-soft);
-    line-height: 1.65;
+    line-height: 1.6;
   }
 
-  .case-file b { color: var(--ink-soft); font-weight: 500; }
+  .case-file b {
+    font-family: var(--f-sc);
+    font-weight: 500;
+    letter-spacing: .04em;
+    color: var(--ink-soft);
+  }
 
   /* ---------- 14. Cómo trabajamos ----------------------------------------- */
 
@@ -768,8 +774,8 @@
 
   .steps li::before {
     content: counter(paso, decimal-leading-zero);
-    font-family: var(--f-mono);
-    font-size: .72rem;
+    font-family: var(--f-display);
+    font-size: 1rem;
     font-variant-numeric: tabular-nums;
     color: var(--ink-faint);
     padding-top: .3rem;
@@ -788,10 +794,9 @@
   }
 
   .contact-grid h4 {
-    font-family: var(--f-mono);
-    font-size: .66rem;
-    letter-spacing: .1em;
-    text-transform: uppercase;
+    font-family: var(--f-sc);
+    font-size: .95rem;
+    letter-spacing: .06em;
     color: var(--ink-faint);
     margin-bottom: .45rem;
   }
@@ -809,9 +814,9 @@
   }
 
   .disclaimer {
-    font-family: var(--f-mono);
-    font-size: .685rem;
-    line-height: 1.7;
+    font-family: var(--f-body);
+    font-size: .84rem;
+    line-height: 1.6;
     max-width: min(70ch, 100%);
     margin: 0 0 1.5rem;
     padding: .9rem 1rem;
