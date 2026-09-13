@@ -82,14 +82,14 @@ Si te la piden impresa o en PDF:
 
 | | Especialidad |
 |---|---|
-| **marta sanchís berlanga** | Socia directora · Despido colectivo y reestructuraciones |
-| **giulio marchetti sarno** | Socio · Movilidad internacional y derecho del trabajo italiano |
-| **nuria ibáñez olmedo** | Seguridad Social y prestaciones |
-| **elena carbajosa ruiz** | Igualdad, acoso y derechos fundamentales |
+| **mari carmen rodríguez baena** | Socia directora · Despido colectivo y reestructuraciones |
+| **roberto gismondo** | Socio · Movilidad internacional y derecho del trabajo italiano |
+| **teresa claramunt moreno** | Seguridad Social y prestaciones |
+| **eva maría sánchez paz** | Igualdad, acoso y derechos fundamentales |
 | **paula etxeberria lasa** | Negociación colectiva y derecho sindical |
-| **rocío alcántara pineda** | Accidente de trabajo y enfermedad profesional |
-| **daniel verdú hinojosa** | Plataformas digitales y falsos autónomos |
-| **sonia prieto naveira** | Teletrabajo, control empresarial y datos del trabajador |
+| **amanda díaz lópez** | Accidente de trabajo y enfermedad profesional |
+| **daniel berrio echeverría** | Plataformas digitales y falsos autónomos |
+| **alba ruiz tejero** | Teletrabajo, control empresarial y datos del trabajador |
 
 ---
 

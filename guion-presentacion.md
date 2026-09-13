@@ -20,23 +20,23 @@
 
 Somos ocho: **seis abogadas y dos abogados**. Siete españoles y uno italiano. Cada uno lleva su especialidad, y eso es deliberado: repartimos por materia, no por quién tiene menos trabajo.
 
-### marta sanchís berlanga — socia directora
+### mari carmen rodríguez baena — socia directora
 **Despido colectivo y reestructuraciones. 23 años de ejercicio.**
 Fundó el despacho en 2009, en plena crisis, después de once años como asesora jurídica de un sindicato del metal. Lleva los ERE, los despidos objetivos y las extinciones del artículo 50, cuando es el trabajador el que se va porque la empresa incumple.
 > Su frase: **«Un ERE no se gana el día de la vista. Se gana en la documentación que pides en la primera reunión.»**
 
-### giulio marchetti sarno — socio
+### roberto gismondo — socio
 **Movilidad internacional y derecho del trabajo italiano. 16 años de ejercicio.**
 Es el italiano del equipo. Napolitano, estudió en la Federico II, ejerció seis años en Nápoles y luego homologó el título en España. Es el único que puede trabajar el caso en las dos jurisdicciones: está colegiado aquí y es *avvocato* en Italia.
 Lleva trabajadores desplazados dentro de la Unión Europea, contratos sometidos a ley italiana y pensiones de gente que ha cotizado en los dos países.
 > Su frase: **«Lo primero que pregunto no es qué te ha pasado, sino en qué país cotizabas cuando te pasó.»**
 
-### nuria ibáñez olmedo
+### teresa claramunt moreno
 **Seguridad Social y prestaciones. 19 años de ejercicio.**
 Su gracia es que trabajó nueve años *dentro* del INSS antes de hacerse abogada. Sabe qué mira el tribunal médico y qué informe sobra. Lleva incapacidad permanente, gran invalidez, jubilaciones con lagunas de cotización y viudedad.
 > Su frase: **«La mayoría de las prestaciones no se deniegan por el fondo. Se deniegan por un plazo.»**
 
-### elena carbajosa ruiz
+### eva maría sánchez paz
 **Igualdad, acoso y derechos fundamentales. 12 años de ejercicio.**
 Lleva el procedimiento de tutela de derechos fundamentales, que es el más rápido pero el más exigente: hay que aportar indicios sólidos desde la demanda para que se invierta la carga de la prueba y sea la empresa la que tenga que justificarse. Despidos de embarazadas, represalias, acoso sexual y por razón de sexo.
 > Su frase: **«Cuando alguien me dice “no tengo pruebas”, casi siempre las tiene. Lo que no tiene es a nadie que le haya dicho que un wasap es una prueba.»**
@@ -46,19 +46,19 @@ Lleva el procedimiento de tutela de derechos fundamentales, que es el más rápi
 Donostiarra, lleva veinte años en Sevilla. Asesora a comités de empresa: mesas de convenio, conflictos colectivos, elecciones sindicales, huelga y servicios mínimos.
 > Su frase: **«Un convenio no es un texto legal, es el acta de una relación de fuerzas.»**
 
-### rocío alcántara pineda
+### amanda díaz lópez
 **Accidente de trabajo y enfermedad profesional. 14 años de ejercicio.**
 Antes de ser abogada fue técnica superior en prevención de riesgos, y sigue yendo al centro de trabajo cuando hace falta. Su especialidad es pelear con la mutua cuando dice «enfermedad común» y en realidad era accidente, y pedir el recargo de prestaciones.
 > Su frase: **«El recargo lo paga la empresa de su bolsillo y no se puede asegurar. Por eso se defiende tanto, y por eso hay que probarlo tan bien.»**
 
-### daniel verdú hinojosa
+### daniel berrio echeverría
 **Plataformas digitales y falsos autónomos. 7 años de ejercicio.**
 El más joven. Lleva todo lo que discute si hay o no relación laboral: riders, conductores de plataforma, autónomos dependientes, becarios que hacen el trabajo de una plantilla. Siempre prueba lo mismo —ajenidad y dependencia— con lo que la propia aplicación registra.
 > Su frase: **«Si la aplicación te dice cuándo, cómo y por cuánto trabajas, ya sabemos lo que eres.»**
 
-### sonia prieto naveira
+### alba ruiz tejero
 **Teletrabajo, control empresarial y datos del trabajador. 11 años de ejercicio.**
-Gallega, venía de protección de datos y montó el área cuando el teletrabajo dejó de ser una excepción. Acuerdos de trabajo a distancia, gastos, desconexión digital, y los casos en los que la empresa se pasa vigilando: correo, geolocalización, cámaras, software espía.
+Venía de protección de datos y montó el área cuando el teletrabajo dejó de ser una excepción. Acuerdos de trabajo a distancia, gastos, desconexión digital, y los casos en los que la empresa se pasa vigilando: correo, geolocalización, cámaras, software espía.
 > Su frase: **«La empresa puede controlar el trabajo. No puede controlar a la persona. Mi trabajo es dibujar esa raya.»**
 
 ---
@@ -90,7 +90,7 @@ Es la parte donde más se nota que es una asignatura de Derecho del Trabajo. La 
 | **¿Te devuelven al puesto?** | Solo obligatorio si el despido es **nulo**, por vulnerar un derecho fundamental (art. 55.5 ET) | Desde 2015, la regla general es indemnización creciente según antigüedad, no reincorporación (D.Lgs. 23/2015) |
 | **Plazo para reclamar** | 20 días hábiles para demandar | 60 días para impugnar y 180 más para demandar |
 
-**La idea que hay detrás:** un trabajador italiano desplazado a España y una española que cotizó once años en Turín tienen el mismo problema —una vida laboral partida en dos— y no lo resuelve un traductor, lo resuelve alguien que sabe las dos leyes. Por eso Giulio existe en el equipo.
+**La idea que hay detrás:** un trabajador italiano desplazado a España y una española que cotizó once años en Turín tienen el mismo problema —una vida laboral partida en dos— y no lo resuelve un traductor, lo resuelve alguien que sabe las dos leyes. Por eso Roberto existe en el equipo.
 
 ---
 
