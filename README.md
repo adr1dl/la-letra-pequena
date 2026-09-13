@@ -86,7 +86,7 @@ Si te la piden impresa o en PDF:
 | **roberto gismondo** | Socio · Movilidad internacional y derecho del trabajo italiano |
 | **teresa claramunt moreno** | Seguridad Social y prestaciones |
 | **eva maría sánchez paz** | Igualdad, acoso y derechos fundamentales |
-| **paula etxeberria lasa** | Negociación colectiva y derecho sindical |
+| **paola pérez** | Negociación colectiva y derecho sindical |
 | **amanda díaz lópez** | Accidente de trabajo y enfermedad profesional |
 | **daniel berrio echeverría** | Plataformas digitales y falsos autónomos |
 | **alba ruiz tejero** | Teletrabajo, control empresarial y datos del trabajador |
@@ -98,7 +98,10 @@ Si te la piden impresa o en PDF:
 - **El nombre es el argumento.** «la letra pequeña» es lo que nadie lee del contrato y lo que acaba decidiendo el caso. Va escrito en minúscula, y en la portada el subtítulo está escrito **literalmente en letra pequeña**.
 - **La página está maquetada como un contrato anotado a mano.** A la izquierda de cada sección hay una columna estrecha en tipografía de máquina de escribir con las normas aplicables —artículo 51 del Estatuto de los Trabajadores, Reglamento (CE) 883/2004, *Codice Civile*…—: son las notas al margen. Las frases importantes llevan un **subrayado amarillo de marcador**.
 - **No hay fotos de los abogados**, solo un recuadro con sus iniciales. Es una decisión honesta: el despacho no existe, así que no se le ponen caras reales a personas inventadas.
-- **Se adapta al móvil** y tiene **modo claro y modo oscuro**: si el ordenador o el teléfono está en tema oscuro, la página se muestra en tinta clara sobre fondo oscuro sin que haya que tocar nada.
+- **La portada enseña una cláusula de contrato de verdad**, con la letra diminuta que nadie lee y la parte abusiva subrayada a marcador, anotada a mano al margen. Es el concepto del despacho, dibujado.
+- **Se adapta al móvil** de verdad: no encoge la página, la reorganiza. Las notas al margen pasan a ser un recuadro dentro del texto, las fichas ponen las iniciales al lado del nombre en vez de encima, y el menú se desliza en horizontal en lugar de amontonarse.
+- **Modo claro y modo oscuro**: si el ordenador o el teléfono está en tema oscuro, la página se muestra en tinta clara sobre fondo oscuro sin que haya que tocar nada.
+- **Preparada para imprimir**: al guardarla en PDF se quitan el menú y los botones, y ninguna ficha de abogado se parte entre dos páginas.
 
 ---
 

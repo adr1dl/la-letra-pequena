@@ -41,9 +41,9 @@ Su gracia es que trabajó nueve años *dentro* del INSS antes de hacerse abogada
 Lleva el procedimiento de tutela de derechos fundamentales, que es el más rápido pero el más exigente: hay que aportar indicios sólidos desde la demanda para que se invierta la carga de la prueba y sea la empresa la que tenga que justificarse. Despidos de embarazadas, represalias, acoso sexual y por razón de sexo.
 > Su frase: **«Cuando alguien me dice “no tengo pruebas”, casi siempre las tiene. Lo que no tiene es a nadie que le haya dicho que un wasap es una prueba.»**
 
-### paula etxeberria lasa
+### paola pérez
 **Negociación colectiva y derecho sindical. 21 años de ejercicio.**
-Donostiarra, lleva veinte años en Sevilla. Asesora a comités de empresa: mesas de convenio, conflictos colectivos, elecciones sindicales, huelga y servicios mínimos.
+Veinte años sentada en mesas de negociación, primero como asesora de una federación de servicios y desde 2014 en el despacho. Asesora a comités de empresa: convenios, conflictos colectivos, elecciones sindicales, huelga y servicios mínimos.
 > Su frase: **«Un convenio no es un texto legal, es el acta de una relación de fuerzas.»**
 
 ### amanda díaz lópez
@@ -76,10 +76,14 @@ Portada con el nombre grande y el claim: *«La letra pequeña de tu contrato es 
 5. **Cómo trabajamos** — los cuatro pasos, del primer papel a la vista.
 6. **Contacto** — dirección, teléfono, dos correos (uno en italiano) y horario.
 
-### Las tres decisiones de diseño que puedes defender
+### Las cuatro decisiones de diseño que puedes defender
 - **El nombre es el diseño.** «la letra pequeña» va en minúscula, y el subtítulo de la portada está escrito en letra pequeña de verdad. La forma dice lo mismo que el texto.
 - **La página está maquetada como un contrato anotado a mano.** A la izquierda de cada sección hay una columna estrecha, en tipografía de máquina de escribir, con las normas aplicables: el artículo 51 del Estatuto, el Reglamento 883/2004, el *Codice Civile*… Es la marginalia, las notas al margen que un abogado escribe en el papel. Y las frases importantes van con un **subrayado amarillo de marcador**, como quien subraya la cláusula que no le cuadra.
 - **No hay fotos de los abogados.** En su lugar, cada uno tiene un recuadro con sus iniciales en minúscula. Es una decisión honesta: el despacho es inventado, así que no ponemos caras que no existen.
+- **La portada enseña una cláusula de verdad.** A la derecha del nombre hay un fragmento de contrato con la letra diminuta que nadie lee, y la cláusula abusiva subrayada a marcador: una en la que el trabajador «renuncia expresamente» a reclamar por movilidad. Al lado, escrita a mano en rojo, la nota que resume el despacho: *«esto no se puede renunciar. y es la línea que nadie lee.»* Si te preguntan de dónde sale la idea de la web, esa imagen es la respuesta.
+
+### Y si preguntan por el móvil
+La página **no es una versión reducida**: se reorganiza. Las notas al margen, que en el ordenador van en una columna lateral, pasan a ser un recuadro con filete amarillo dentro del texto; las fichas ponen las iniciales al lado del nombre en vez de encima, para no gastar media pantalla por abogado; y el menú se desliza en horizontal en lugar de amontonarse en tres filas.
 
 ### El tema España–Italia
 Es la parte donde más se nota que es una asignatura de Derecho del Trabajo. La web enseña, una al lado de otra, **las dos formas de resolver el mismo problema**:
