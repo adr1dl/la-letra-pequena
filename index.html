@@ -781,8 +781,32 @@
     padding-top: .3rem;
   }
 
-  .steps b { display: block; font-weight: 600; font-size: .94rem; margin-bottom: .15rem; }
-  .steps span { font-size: .88rem; color: var(--ink-soft); }
+  /* Cada paso es una rejilla de dos columnas (numero | texto) con TRES hijos:
+     el ::before del numero, el titulo y la descripcion. Sin decirle a los dos
+     ultimos que van en la columna 2, el navegador manda la descripcion a la
+     fila siguiente y columna 1 — la de 2,5 rem — y el texto se parte letra a
+     letra. Colocarlos explicitamente es lo que arregla la seccion. */
+  .steps b,
+  .steps span { grid-column: 2; }
+
+  .steps b {
+    display: block;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: .1rem;
+  }
+
+  .steps span {
+    font-size: .95rem;
+    color: var(--ink-soft);
+    line-height: 1.55;
+  }
+
+  /* En movil el numero se pega mas al texto: 2,5 rem de sangria en una
+     pantalla de 390 px es ancho que le falta a la descripcion. */
+  @media (max-width: 560px) {
+    .steps li { grid-template-columns: 1.9rem minmax(0, 1fr); gap: 0 .65rem; }
+  }
 
   /* ---------- 15. Contacto ------------------------------------------------- */
 
