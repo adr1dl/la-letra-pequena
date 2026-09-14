@@ -5,6 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="La letra pequeña — despacho de abogados del trabajo y de la Seguridad Social. Trabajo académico; despacho y casos ficticios.">
 <title>La letra pequeña · Abogados laboralistas</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 60'%3E%3Crect x='1' y='1' width='46' height='46' fill='%23fff' stroke='%2314284B' stroke-width='2'/%3E%3Ctext x='24' y='32' text-anchor='middle' font-family='Georgia,serif' font-size='21' fill='%2314284B'%3ELP%3C/text%3E%3Crect x='1' y='52' width='22' height='7' fill='%23F1BF00' stroke='%23AA151B' stroke-width='1.75'/%3E%3Crect x='25' y='52' width='7.34' height='7' fill='%23009246'/%3E%3Crect x='32.33' y='52' width='7.34' height='7' fill='%23fff'/%3E%3Crect x='39.66' y='52' width='7.34' height='7' fill='%23CE2B37'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
@@ -140,11 +141,19 @@
 
   .brand {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    gap: .75rem;
     text-decoration: none;
     line-height: 1.1;
     flex-shrink: 0;
   }
+
+  .brand-text { display: flex; flex-direction: column; }
+
+  /* El símbolo toma el color del texto (currentColor): marino en la
+     cabecera y blanco en el pie, sin duplicar el dibujo. */
+  .logo { width: 2.3rem; height: 2.875rem; color: var(--navy); flex-shrink: 0; }
+  .footer-brand .logo { color: var(--white); }
 
   .brand-name {
     font-family: var(--f-display);
@@ -192,7 +201,6 @@
 
   @media (max-width: 900px) {
     .site-header .container { flex-direction: column; align-items: stretch; gap: 0; padding-block: .6rem 0; }
-    .brand { align-items: flex-start; }
     .site-nav { gap: 1.2rem; }
     .site-nav .btn { display: none; }
   }
@@ -452,7 +460,52 @@
     color: var(--ink-soft);
   }
 
-  /* ---------- 9. Áreas de práctica --------------------------------------- */
+  /* ---------- 9. El despacho: texto y foto -------------------------------- */
+
+  .about {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 2.5rem 4rem;
+    align-items: center;
+    margin-bottom: 3rem;
+  }
+
+  @media (max-width: 880px) { .about { grid-template-columns: minmax(0, 1fr); } }
+
+  .about .section-head { margin-bottom: 1.2rem; }
+  .about .flow p { margin: 0; }
+
+  /* Marco dorado desplazado detrás de la foto: el recurso de "cuadro
+     colgado" que usan muchas webs de despachos. isolation crea un contexto
+     propio para que el z-index negativo no se esconda tras el fondo. */
+  .about-photo { position: relative; margin: 0 1rem 1rem 0; isolation: isolate; }
+
+  .about-photo::before {
+    content: "";
+    position: absolute;
+    inset: 1rem -1rem -1rem 1rem;
+    border: 1px solid var(--gold);
+    z-index: -1;
+  }
+
+  .about-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+  }
+
+  .about-photo figcaption {
+    position: absolute;
+    right: .5rem;
+    bottom: .4rem;
+    font-size: .68rem;
+    color: rgba(255, 255, 255, .85);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+  }
+
+  /* ---------- 10. Áreas de práctica --------------------------------------- */
 
   .intro-grid {
     display: grid;
@@ -495,7 +548,7 @@
 
   .area p { margin: 0; font-size: .92rem; color: var(--ink-soft); line-height: 1.55; }
 
-  /* ---------- 10. Equipo -------------------------------------------------- */
+  /* ---------- 11. Equipo -------------------------------------------------- */
 
   .team-facts {
     display: flex;
@@ -604,7 +657,7 @@
     .lawyer-name { font-size: 1.3rem; }
   }
 
-  /* ---------- 11. España · Italia ----------------------------------------- */
+  /* ---------- 12. España · Italia ----------------------------------------- */
 
   .compare {
     display: grid;
@@ -652,7 +705,7 @@
     margin: 2.5rem 0 1.2rem;
   }
 
-  /* ---------- 12. Casos ---------------------------------------------------- */
+  /* ---------- 13. Casos ---------------------------------------------------- */
 
   .cases {
     display: grid;
@@ -701,7 +754,7 @@
 
   .case-file b { color: var(--gold-text); font-weight: 600; }
 
-  /* ---------- 13. Cómo trabajamos ----------------------------------------- */
+  /* ---------- 14. Cómo trabajamos ----------------------------------------- */
 
   /* Aquí la numeración sí informa: es una secuencia, y el orden importa. */
   .steps {
@@ -745,7 +798,7 @@
 
   .steps span { display: block; font-size: .93rem; color: var(--ink-soft); line-height: 1.55; }
 
-  /* ---------- 14. Contacto ------------------------------------------------- */
+  /* ---------- 15. Contacto ------------------------------------------------- */
 
   .contact {
     display: grid;
@@ -794,7 +847,7 @@
 
   .access li::before { content: "✓"; color: var(--gold-text); margin-right: .55rem; }
 
-  /* ---------- 15. Pie ------------------------------------------------------ */
+  /* ---------- 16. Pie ------------------------------------------------------ */
 
   .site-footer {
     background: var(--navy-deep);
@@ -826,7 +879,7 @@
     border-top: 1px solid rgba(255, 255, 255, .12);
   }
 
-  /* ---------- 16. Movimiento e impresión ---------------------------------- */
+  /* ---------- 17. Movimiento e impresión ---------------------------------- */
 
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
@@ -854,6 +907,21 @@
 </style>
 </head>
 <body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <!-- Logo: monograma LP en un cuadrado fino y, debajo, un filete partido
+       con las dos banderas: España en franjas horizontales (1:2:1) e Italia
+       en verticales. La blanca de Italia lleva un filete para verse sobre blanco. -->
+  <symbol id="logo" viewBox="0 0 48 60">
+    <rect x="1" y="1" width="46" height="46" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    <text x="24" y="32" text-anchor="middle" font-family="'EB Garamond', Georgia, serif" font-size="21" letter-spacing=".5" fill="currentColor">LP</text>
+    <rect x="1" y="52" width="22" height="1.75" fill="#AA151B"/>
+    <rect x="1" y="53.75" width="22" height="3.5" fill="#F1BF00"/>
+    <rect x="1" y="57.25" width="22" height="1.75" fill="#AA151B"/>
+    <rect x="25" y="52" width="7.34" height="7" fill="#009246"/>
+    <rect x="32.33" y="52.25" width="7.34" height="6.5" fill="#FFFFFF" stroke="#D5D0C4" stroke-width=".5"/>
+    <rect x="39.66" y="52" width="7.34" height="7" fill="#CE2B37"/>
+  </symbol>
+</svg>
 
 <div class="topstrip">
   <div class="container">
@@ -869,8 +937,11 @@
 <header class="site-header">
   <div class="container">
     <a class="brand" href="#top">
-      <span class="brand-name">La letra pequeña</span>
-      <span class="brand-sub">Abogados laboralistas</span>
+      <svg class="logo" aria-hidden="true"><use href="#logo"/></svg>
+      <span class="brand-text">
+        <span class="brand-name">La letra pequeña</span>
+        <span class="brand-sub">Abogados laboralistas</span>
+      </span>
     </a>
     <nav class="site-nav" aria-label="Secciones">
       <a href="#despacho">El despacho</a>
@@ -934,15 +1005,22 @@
   <!-- ================= EL DESPACHO ================= -->
   <section class="section" id="despacho">
     <div class="container">
-      <div class="intro-grid">
-        <div class="section-head">
-          <span class="eyebrow">El despacho</span>
-          <h2>Un despacho que se explica</h2>
-          <p class="lede">Nacimos en 2009, en plena destrucción de empleo, atendiendo a gente que llegaba con una carta que no entendía. Esa sigue siendo la escena y sigue siendo el trabajo: traducir el papel antes de pelearlo.</p>
+      <div class="about">
+        <div>
+          <div class="section-head">
+            <span class="eyebrow">El despacho</span>
+            <h2>Un despacho que se explica</h2>
+            <p class="lede">Nacimos en 2009, en plena destrucción de empleo, atendiendo a gente que llegaba con una carta que no entendía. Esa sigue siendo la escena y sigue siendo el trabajo: traducir el papel antes de pelearlo.</p>
+          </div>
+          <div class="flow">
+            <p>Llevamos exclusivamente derecho del trabajo y de la Seguridad Social. No tocamos nada más, y esa es la razón por la que podemos decirte el primer día si tu asunto tiene recorrido o no lo tiene. Cuando no lo tiene, lo decimos igual.</p>
+          </div>
         </div>
-        <div class="flow">
-          <p>Llevamos exclusivamente derecho del trabajo y de la Seguridad Social. No tocamos nada más, y esa es la razón por la que podemos decirte el primer día si tu asunto tiene recorrido o no lo tiene. Cuando no lo tiene, lo decimos igual.</p>
-        </div>
+        <figure class="about-photo">
+          <img src="img/libros-de-derecho.jpg" width="1400" height="1094" loading="lazy"
+               alt="Tomos encuadernados en piel de repertorios de jurisprudencia, apilados sobre una estantería.">
+          <figcaption>Foto: David Whelan · Wikimedia Commons · CC0</figcaption>
+        </figure>
       </div>
 
       <div class="areas">
@@ -1350,8 +1428,11 @@
 <footer class="site-footer">
   <div class="container">
     <span class="brand footer-brand">
-      <span class="brand-name">La letra pequeña</span>
-      <span class="brand-sub">Abogados del trabajo y de la Seguridad Social</span>
+      <svg class="logo" aria-hidden="true"><use href="#logo"/></svg>
+      <span class="brand-text">
+        <span class="brand-name">La letra pequeña</span>
+        <span class="brand-sub">Abogados del trabajo y de la Seguridad Social</span>
+      </span>
     </span>
     <p class="disclaimer">
       <strong>AVISO</strong> · Esta página es un trabajo académico para la asignatura de Derecho del Trabajo y de la Seguridad Social.

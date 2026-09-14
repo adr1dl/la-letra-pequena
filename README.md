@@ -63,7 +63,9 @@ Si te la piden impresa o en PDF:
 
 | Archivo | Qué es |
 |---|---|
-| `index.html` | **La web entera**, en un solo archivo. Incluye dentro el diseño y todo el contenido, así que no depende de nada más. |
+| `index.html` | **La web entera**: el diseño y todo el contenido van dentro de este archivo. |
+| `img/libros-de-derecho.jpg` | La foto de la sección «El despacho». Tiene que estar junto a `index.html`, dentro de la carpeta `img`. |
+| `img/logo.svg` | El **logotipo** suelto, por si quieres ponerlo en la presentación o en la portada del trabajo. |
 | `guion-presentacion.md` | El **guion para exponer en clase**, de unos 8 minutos: la idea del nombre, los ocho profesionales uno a uno, las decisiones de diseño y un apartado final de preguntas probables con su respuesta. |
 
 ---
@@ -96,10 +98,11 @@ Si te la piden impresa o en PDF:
 ## 🎨 Las decisiones de diseño, por si te preguntan
 
 - **Aspecto de bufete clásico.** Tema claro, fondo blanco y crema, y la paleta más habitual del sector: **azul marino** para la seriedad (portada, pie y botones) y **dorado mate** como acento (filetes, cifras e iniciales). Es lo que un cliente espera ver en la web de un despacho, y eso da confianza antes de leer nada.
+- **Un logotipo con los dos países.** Las iniciales **LP** en Garamond dentro de un cuadrado fino y, debajo, un filete partido con las dos banderas: **España** en franjas horizontales y **Italia** en verticales. Resume en un símbolo lo que diferencia al despacho, que trabaja en las dos jurisdicciones. Es el mismo dibujo en la cabecera, en el pie (en blanco) y en el icono de la pestaña del navegador.
 - **La tipografía es la del oficio.** Títulos y citas en **EB Garamond**, la letra con la que se imprime el libro jurídico europeo; el texto en **Source Sans 3**, una letra neutra y muy legible en pantalla.
 - **El nombre se explica en la portada.** «La letra pequeña» es lo que nadie lee del contrato y lo que acaba decidiendo el caso. Por eso, al lado del lema, hay un fragmento de contrato con la letra diminuta y la cláusula abusiva marcada en dorado, con la nota *«A esto no se puede renunciar. Y es la línea que nadie lee.»*
 - **La normativa, a la vista.** Cada sección cierra con un recuadro de **normativa aplicable** —Estatuto de los Trabajadores, Reglamento (CE) 883/2004, *Codice Civile*…— y la de «Cómo trabajamos» con los **plazos que corren solos**.
-- **No hay fotos de los abogados**, solo un recuadro con sus iniciales. Es una decisión honesta: el despacho no existe, así que no se le ponen caras reales a personas inventadas.
+- **No hay fotos de los abogados**, solo un recuadro con sus iniciales. Es una decisión honesta: el despacho no existe, así que no se le ponen caras reales a personas inventadas. La única foto de la web, en «El despacho», es de libros de jurisprudencia: ambienta sin mostrar a nadie.
 - **Se adapta al móvil** de verdad: no encoge la página, la reorganiza. Las tarjetas pasan a una columna, los pasos se apilan y el menú se desliza en horizontal en lugar de amontonarse.
 - **Preparada para imprimir**: al guardarla en PDF se quitan el menú y los botones, las bandas de color pasan a fondo blanco y ninguna ficha se parte entre dos páginas.
 
@@ -112,6 +115,12 @@ Si te la piden impresa o en PDF:
 **Italia** — Codice Civile, libro V · Legge 604/1966 · Legge 300/1970 (*Statuto dei Lavoratori*) · D.Lgs. 23/2015 (*contratto a tutele crescenti*) · Legge 92/2012.
 
 **Unión Europea** — Reglamento (CE) 883/2004 de coordinación de los sistemas de Seguridad Social · Directivas 96/71/CE y 2018/957 sobre desplazamiento de trabajadores.
+
+---
+
+## 📷 Créditos de la imagen
+
+«Canadian law books», de **David Whelan**, en [Wikimedia Commons](https://commons.wikimedia.org/w/index.php?curid=58022224). Dominio público con licencia **CC0 1.0**: se puede usar sin pedir permiso. Se cita igualmente, como buena práctica.
 
 ---
 

@@ -76,12 +76,13 @@ Una banda azul marino con el lema: *«La letra pequeña de tu contrato es la que
 5. **Cómo trabajamos** — los cuatro pasos, del primer papel a la vista.
 6. **Contacto** — dirección, teléfono, dos correos (uno en italiano) y horario.
 
-### Las cinco decisiones de diseño que puedes defender
+### Las seis decisiones de diseño que puedes defender
 - **Parece un bufete porque tiene que parecerlo.** Tema claro, blanco y crema, con la paleta más clásica del sector: **azul marino**, que transmite seriedad, y **dorado mate** como acento. Un cliente que busca abogado espera ese aspecto, y reconocerlo le da confianza antes de leer una línea.
+- **El logo cuenta qué nos diferencia.** Las iniciales **LP** en un cuadrado fino y, debajo, un filete con las dos banderas: la española en franjas horizontales y la italiana en verticales. Somos un despacho que trabaja en los dos países, y eso se ve antes de leer el nombre.
 - **La tipografía la elige el oficio, no el gusto.** Los títulos y las citas van en **EB Garamond**: el garamond es la letra con la que se imprime el libro jurídico europeo desde el siglo XVI. El texto va en **Source Sans 3**, una letra neutra pensada para leer en pantalla.
 - **La portada enseña una cláusula de verdad.** Al lado del lema hay un fragmento de contrato con la letra diminuta que nadie lee, y la cláusula abusiva marcada en dorado: una en la que el trabajador «renuncia expresamente» a reclamar por movilidad. Debajo, la nota que resume el despacho: *«A esto no se puede renunciar. Y es la línea que nadie lee.»* Si te preguntan de dónde sale el nombre, esa imagen es la respuesta.
 - **La normativa se ve.** Cada sección termina con un recuadro de **normativa aplicable**: el Estatuto de los Trabajadores, el Reglamento 883/2004, el *Codice Civile*… Y en «Cómo trabajamos», un recuadro con los **plazos que corren solos**, que es lo primero que hace perder un caso.
-- **No hay fotos de los abogados.** En su lugar, cada uno tiene un recuadro azul con sus iniciales en dorado. Es una decisión honesta: el despacho es inventado, así que no ponemos caras que no existen.
+- **No hay fotos de los abogados.** En su lugar, cada uno tiene un recuadro azul con sus iniciales en dorado. Es una decisión honesta: el despacho es inventado, así que no ponemos caras que no existen. La única foto de la web es de libros de jurisprudencia, con licencia libre.
 
 ### Y si preguntan por el móvil
 La página **no es una versión reducida**: se reorganiza. Las tarjetas de áreas, equipo y casos pasan a una sola columna, los cuatro pasos se apilan, la franja de datos se queda en dos por dos y el menú se desliza en horizontal en lugar de amontonarse en tres filas.
