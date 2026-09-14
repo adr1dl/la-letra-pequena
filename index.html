@@ -3,94 +3,55 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="la letra pequeña — despacho de abogados del trabajo y de la seguridad social. Trabajo académico; despacho y casos ficticios.">
-<style>
-  /* Reset mínimo: el navegador no debe imponer sus propios márgenes. */
-  html { color-scheme: light dark; }
-  body { margin: 0; }
-  img { max-width: 100%; }
-  [hidden] { display: none !important; }
-</style>
-<title>la letra pequeña</title>
+<meta name="description" content="La letra pequeña — despacho de abogados del trabajo y de la Seguridad Social. Trabajo académico; despacho y casos ficticios.">
+<title>La letra pequeña · Abogados laboralistas</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Alegreya+Sans:ital,wght@0,400;0,500;0,700;1,400&family=Alegreya+Sans+SC:wght@400;500;700&family=Caveat:wght@500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Source+Sans+3:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap">
 
 <style>
   /* ============================================================
-     la letra pequeña — despacho laboralista (proyecto académico)
+     La letra pequeña — despacho laboralista (proyecto académico)
 
-     Concepto: la página se compone como un CONTRATO ANOTADO A MANO.
-       · columna de marginalia con la normativa aplicable
-       · subrayado de marcador sobre lo que importa
-       · anotaciones manuscritas en rojo, de uso contado
-
-     Paleta: tinta azul-negra sobre papel gris frío.
-       acento 1 = marcador ámbar (solo como subrayado o filete)
-       acento 2 = rojo de anotación (solo marginalia y notas)
+     Concepto: la web de un bufete clásico. Sobria, en tema claro,
+     con la paleta de siempre del sector:
+       · azul marino = seriedad; bandas de portada y pie, botones
+       · dorado mate = acento; filetes, cifras, iniciales
+     La única licencia es la cláusula de contrato de la portada,
+     que explica el nombre del despacho.
      ============================================================ */
 
   /* ---------- 1. Tokens ------------------------------------------------- */
 
   :root {
-    --paper:        #EEEFEA;
-    --paper-deep:   #E5E7E1;
-    --surface:      #F6F6F3;
-    --ink:          #17202B;
-    --ink-soft:     #47525F;
-    --ink-faint:    #6F7A85;
-    --rule:         #C5C9C1;
-    --rule-soft:    #D9DBD4;
-    --marker:       #E8C547;
-    --marker-wash:  rgba(232, 197, 71, .48);
-    --anno:         #A63A2A;
-    --on-ink:       #F4F4F0;
+    color-scheme: light;
 
-    /* Garamond para lo editorial: es la letra del libro jurídico europeo.
-       Alegreya Sans, humanista y cálida, para la prosa de servicio.
-       Versalitas para cargos y etiquetas: el recurso del documento legal,
-       donde antes había una monoespaciada que sonaba a terminal. */
+    --white:      #FFFFFF;
+    --cream:      #F7F5F0;
+    --line:       #E4DFD3;
+    --ink:        #1F2937;
+    --ink-soft:   #4B5563;
+    --ink-faint:  #6B7280;
+
+    --navy:       #14284B;
+    --navy-deep:  #0E1D38;
+    --on-navy:    #E8ECF3;
+    --on-navy-soft: #AEB9CC;
+
+    /* El dorado de marca (#B08D57) no llega al contraste mínimo como texto
+       pequeño sobre blanco; para letra se usa su versión oscura. */
+    --gold:       #B08D57;
+    --gold-text:  #7F6235;
+    --gold-wash:  rgba(176, 141, 87, .30);
+
+    /* Garamond para títulos: la letra del libro jurídico europeo.
+       Source Sans 3 para el texto: neutra y muy legible en pantalla. */
     --f-display: "EB Garamond", "Iowan Old Style", Georgia, serif;
-    --f-body:    "Alegreya Sans", "Segoe UI", system-ui, sans-serif;
-    --f-sc:      "Alegreya Sans SC", "Alegreya Sans", system-ui, sans-serif;
-    --f-hand:    "Caveat", "Segoe Script", cursive;
+    --f-body:    "Source Sans 3", "Segoe UI", system-ui, sans-serif;
 
-    --measure: min(63ch, 100%);
-    --gutter:  clamp(1rem, 5vw, 4rem);
-    --rail:    12.5rem;
-    --bar:     3.75rem;   /* alto de la barra fija, para los anclajes */
-  }
-
-  @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
-      --paper:        #12171E;
-      --paper-deep:   #0B0F14;
-      --surface:      #181E26;
-      --ink:          #E7E9E5;
-      --ink-soft:     #AEB7C1;
-      --ink-faint:    #838D98;
-      --rule:         #303A45;
-      --rule-soft:    #232C35;
-      --marker:       #E8C547;
-      --marker-wash:  rgba(232, 197, 71, .28);
-      --anno:         #E58A76;
-      --on-ink:       #12171E;
-    }
-  }
-
-  :root[data-theme="dark"] {
-    --paper:        #12171E;
-    --paper-deep:   #0B0F14;
-    --surface:      #181E26;
-    --ink:          #E7E9E5;
-    --ink-soft:     #AEB7C1;
-    --ink-faint:    #838D98;
-    --rule:         #303A45;
-    --rule-soft:    #232C35;
-    --marker:       #E8C547;
-    --marker-wash:  rgba(232, 197, 71, .28);
-    --anno:         #E58A76;
-    --on-ink:       #12171E;
+    --measure: min(66ch, 100%);
+    --gutter:  clamp(1rem, 5vw, 3rem);
+    --header:  4.5rem;   /* alto de la cabecera fija, para los anclajes */
   }
 
   /* ---------- 2. Base ---------------------------------------------------- */
@@ -100,1059 +61,1096 @@
   html { scroll-behavior: smooth; }
 
   body {
-    background: var(--paper);
+    margin: 0;
+    background: var(--white);
     color: var(--ink);
     font-family: var(--f-body);
     font-size: 17px;
-    font-weight: 400;
-    line-height: 1.62;
+    line-height: 1.65;
     -webkit-font-smoothing: antialiased;
     /* Una palabra larguísima (un nombre de ley) no debe desbordar en móvil. */
     overflow-wrap: break-word;
   }
 
-  ::selection { background: var(--marker-wash); color: var(--ink); }
+  img { max-width: 100%; }
+  [hidden] { display: none !important; }
+
+  ::selection { background: var(--gold-wash); }
 
   a { color: inherit; }
 
-  :focus-visible {
-    outline: 2px solid var(--anno);
-    outline-offset: 3px;
-  }
+  :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
 
-  h1, h2, h3, h4 { font-weight: 400; margin: 0; text-wrap: balance; }
+  h1, h2, h3, h4 { margin: 0; font-weight: 500; text-wrap: balance; }
   p { text-wrap: pretty; }
 
-  .wrap {
-    max-width: 74rem;
+  .container {
+    max-width: 72rem;
     margin: 0 auto;
     padding-inline: var(--gutter);
   }
 
-  /* Marcador: un subrayado, no un bloque de color. */
-  mark {
-    background: linear-gradient(transparent 56%, var(--marker-wash) 56%, var(--marker-wash) 95%, transparent 95%);
-    color: inherit;
-    padding: 0 .08em;
+  /* ---------- 3. Franja superior y cabecera ------------------------------ */
+
+  .topstrip {
+    background: var(--navy-deep);
+    color: var(--on-navy-soft);
+    font-size: .8rem;
+    letter-spacing: .02em;
   }
 
-  /* Anotación a mano: la única licencia decorativa, y se usa tres veces. */
-  .hand {
-    font-family: var(--f-hand);
-    font-size: 1.28rem;
-    line-height: 1.25;
-    color: var(--anno);
+  .topstrip .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: .25rem 1.5rem;
+    padding-block: .45rem;
   }
 
-  /* ---------- 3. Barra fija --------------------------------------------- */
+  .topstrip ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .25rem 1.5rem;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
 
-  .topbar {
+  .topstrip a { text-decoration: none; }
+  .topstrip a:hover { color: var(--white); }
+
+  @media (max-width: 640px) { .topstrip .hours { display: none; } }
+
+  .site-header {
     position: sticky;
     top: 0;
     z-index: 20;
-    background: var(--paper);
-    border-bottom: 1px solid var(--rule);
+    background: var(--white);
+    border-bottom: 1px solid var(--line);
+    box-shadow: 0 2px 12px rgba(20, 40, 75, .06);
   }
 
-  .topbar-inner {
-    max-width: 74rem;
-    margin: 0 auto;
-    padding-inline: var(--gutter);
-    min-height: var(--bar);
+  .site-header .container {
+    min-height: var(--header);
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 1.5rem;
   }
 
-  .wordmark {
-    font-family: var(--f-display);
-    font-size: 1.14rem;
-    letter-spacing: .01em;
-    text-transform: lowercase;
+  .brand {
+    display: flex;
+    flex-direction: column;
     text-decoration: none;
-    white-space: nowrap;
+    line-height: 1.1;
     flex-shrink: 0;
   }
 
-  .wordmark i { font-style: italic; color: var(--ink-soft); }
-
-  nav {
-    display: flex;
-    gap: 1.5rem;
-    font-family: var(--f-sc);
-    font-size: .93rem;
-    letter-spacing: .045em;
-    /* En pantallas estrechas el menú se desliza en horizontal dentro de su
-       caja, en lugar de romper en tres filas y engordar la barra. */
-    overflow-x: auto;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    padding-block: 1.1rem;
+  .brand-name {
+    font-family: var(--f-display);
+    font-size: 1.55rem;
+    font-weight: 500;
+    color: var(--navy);
   }
 
-  nav::-webkit-scrollbar { display: none; }
+  .brand-sub {
+    font-size: .68rem;
+    font-weight: 600;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--gold-text);
+    margin-top: .2rem;
+  }
 
-  nav a {
+  .site-nav {
+    display: flex;
+    align-items: center;
+    gap: 1.6rem;
+    font-size: .92rem;
+    font-weight: 500;
+    /* En pantallas estrechas el menú se desliza en horizontal dentro de su
+       caja, en lugar de romper en varias filas y engordar la cabecera. */
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .site-nav::-webkit-scrollbar { display: none; }
+
+  .site-nav a {
     text-decoration: none;
     color: var(--ink-soft);
     white-space: nowrap;
-    padding-bottom: 3px;
-    border-bottom: 1px solid transparent;
+    padding-block: .4rem;
+    border-bottom: 2px solid transparent;
     transition: color .15s ease, border-color .15s ease;
   }
 
-  nav a:hover { color: var(--ink); border-bottom-color: var(--marker); }
+  .site-nav a:hover { color: var(--navy); border-bottom-color: var(--gold); }
 
-  @media (max-width: 760px) {
-    .topbar-inner { gap: 1rem; }
-    .wordmark i { display: none; }
-    nav { gap: 1.1rem; }
+  .site-nav .btn { border-bottom: 0; padding: .6rem 1.1rem; color: var(--white); }
+  .site-nav .btn:hover { color: var(--navy); }
+
+  @media (max-width: 900px) {
+    .site-header .container { flex-direction: column; align-items: stretch; gap: 0; padding-block: .6rem 0; }
+    .brand { align-items: flex-start; }
+    .site-nav { gap: 1.2rem; }
+    .site-nav .btn { display: none; }
   }
 
-  /* ---------- 4. Rejilla de secciones ----------------------------------- */
-
-  .band {
-    display: grid;
-    grid-template-columns: var(--rail) minmax(0, 1fr);
-    gap: 0 3rem;
-    padding-block: clamp(2.75rem, 7vw, 5.5rem);
-    border-top: 1px solid var(--rule);
-    scroll-margin-top: var(--bar);
-  }
-
-  @media (max-width: 880px) {
-    .band { grid-template-columns: minmax(0, 1fr); gap: 1.75rem; }
-  }
-
-  /* ---------- 5. Marginalia ---------------------------------------------- */
-
-  .rail {
-    font-family: var(--f-body);
-    font-size: .83rem;
-    line-height: 1.5;
-    color: var(--ink-faint);
-  }
-
-  .rail p { margin: 0 0 .85rem; }
-  .rail p:last-child { margin-bottom: 0; }
-
-  .rail .tag {
-    display: block;
-    font-family: var(--f-sc);
-    color: var(--ink-soft);
-    font-weight: 500;
-    letter-spacing: .07em;
-    font-size: .9rem;
-    margin-bottom: 1.05rem;
-    padding-bottom: .5rem;
-    border-bottom: 1px solid var(--rule);
-  }
-
-  .rail .it { color: var(--anno); }
-
-  /* En móvil la marginalia deja de ser columna y pasa a ser una nota
-     recuadrada: apilar sus fragmentos sueltos los volvía ilegibles. */
-  @media (max-width: 880px) {
-    .rail {
-      background: var(--surface);
-      border-left: 2px solid var(--marker);
-      padding: .95rem 1.1rem;
-    }
-    .rail .tag { margin-bottom: .7rem; }
-  }
-
-  /* ---------- 6. Tipografía de lectura ----------------------------------- */
-
-  h2 {
-    font-family: var(--f-display);
-    font-size: clamp(2rem, 4.6vw, 2.95rem);
-    line-height: 1.12;
-    letter-spacing: -.015em;
-    margin-bottom: 1rem;
-  }
-
-  h3 {
-    font-family: var(--f-display);
-    font-size: 1.5rem;
-    line-height: 1.2;
-  }
-
-  .lede {
-    font-family: var(--f-display);
-    font-size: clamp(1.2rem, 2.1vw, 1.45rem);
-    line-height: 1.5;
-    color: var(--ink-soft);
-    max-width: var(--measure);
-    margin: 0 0 1.75rem;
-  }
-
-  .flow p { max-width: var(--measure); }
-
-  /* ---------- 7. Botones -------------------------------------------------- */
-
-  .actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: .7rem;
-    margin: 0 0 2rem;
-  }
+  /* ---------- 4. Botones -------------------------------------------------- */
 
   .btn {
     display: inline-flex;
     align-items: center;
-    gap: .5rem;
-    font-family: var(--f-sc);
-    font-size: .97rem;
-    font-weight: 500;
-    letter-spacing: .05em;
+    justify-content: center;
+    font-family: var(--f-body);
+    font-size: .95rem;
+    font-weight: 600;
+    letter-spacing: .02em;
     text-decoration: none;
-    padding: .72rem 1.35rem;
-    border: 1px solid var(--ink);
-    transition: background-color .15s ease, color .15s ease, transform .12s ease;
+    padding: .8rem 1.5rem;
+    border: 1px solid transparent;
+    border-radius: 2px;
+    white-space: nowrap;
+    transition: background-color .15s ease, color .15s ease, border-color .15s ease;
   }
 
-  .btn-primary { background: var(--ink); color: var(--on-ink); }
-  .btn-primary:hover { background: transparent; color: var(--ink); }
+  .btn-gold { background: var(--gold); color: var(--white); border-color: var(--gold); }
+  .btn-gold:hover { background: transparent; color: var(--gold); }
 
-  .btn-ghost { background: transparent; color: var(--ink); border-color: var(--rule); }
-  .btn-ghost:hover { border-color: var(--ink); }
+  .btn-navy { background: var(--navy); color: var(--white); border-color: var(--navy); }
+  .btn-navy:hover { background: transparent; color: var(--navy); }
 
-  .btn:active { transform: translateY(1px); }
+  .btn-outline-light { color: var(--white); border-color: rgba(255, 255, 255, .55); }
+  .btn-outline-light:hover { border-color: var(--white); background: rgba(255, 255, 255, .08); }
 
-  /* ---------- 8. Portada -------------------------------------------------- */
+  .btn-outline { color: var(--navy); border-color: var(--navy); }
+  .btn-outline:hover { background: var(--navy); color: var(--white); }
+
+  .actions { display: flex; flex-wrap: wrap; gap: .75rem; }
+
+  /* ---------- 5. Portada -------------------------------------------------- */
 
   .hero {
+    background: var(--navy);
+    color: var(--on-navy);
+    padding-block: clamp(3rem, 8vw, 5.5rem);
+  }
+
+  .hero .container {
     display: grid;
-    grid-template-columns: minmax(0, 1.05fr) minmax(0, .95fr);
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, .9fr);
     align-items: center;
     gap: clamp(2rem, 5vw, 4rem);
-    padding-block: clamp(2.5rem, 7vw, 5rem) clamp(2.5rem, 6vw, 4rem);
-    scroll-margin-top: var(--bar);
   }
 
-  @media (max-width: 900px) {
-    .hero { grid-template-columns: minmax(0, 1fr); }
-  }
+  @media (max-width: 900px) { .hero .container { grid-template-columns: minmax(0, 1fr); } }
 
-  .hero-mark {
-    font-family: var(--f-display);
-    font-size: clamp(3rem, 11vw, 6rem);
-    line-height: .95;
-    letter-spacing: -.035em;
-    text-transform: lowercase;
-    margin: 0 0 1.4rem;
-  }
-
-  /* El nombre es el argumento: "pequeña" se escribe pequeña. */
-  .hero-mark .small {
+  .eyebrow {
     display: block;
-    font-size: .3em;
-    letter-spacing: .005em;
-    color: var(--ink-soft);
-    font-style: italic;
-    margin-top: .4em;
-    padding-left: .15em;
+    font-size: .78rem;
+    font-weight: 600;
+    letter-spacing: .16em;
+    text-transform: uppercase;
+    color: var(--gold-text);
+    margin-bottom: .9rem;
   }
+
+  .hero .eyebrow { color: var(--gold); }
+
+  .hero h1 {
+    font-family: var(--f-display);
+    font-size: clamp(2.2rem, 5.2vw, 3.6rem);
+    line-height: 1.1;
+    color: var(--white);
+    margin-bottom: 1.1rem;
+  }
+
+  .hero-rule { width: 3.5rem; height: 2px; background: var(--gold); border: 0; margin: 0 0 1.3rem; }
 
   .hero-claim {
     font-family: var(--f-display);
-    font-size: clamp(1.3rem, 2.8vw, 1.78rem);
-    line-height: 1.42;
-    max-width: min(32ch, 100%);
-    margin: 0 0 1.3rem;
+    font-style: italic;
+    font-size: clamp(1.2rem, 2.3vw, 1.45rem);
+    line-height: 1.45;
+    color: var(--white);
+    margin: 0 0 1rem;
   }
 
   .hero-sub {
-    max-width: min(44ch, 100%);
-    color: var(--ink-soft);
-    margin: 0 0 1.9rem;
+    max-width: min(48ch, 100%);
+    color: var(--on-navy-soft);
+    margin: 0 0 2rem;
   }
 
-  .hero-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: .4rem .75rem;
-    font-family: var(--f-sc);
-    font-size: .93rem;
-    letter-spacing: .045em;
-    color: var(--ink-faint);
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
+  /* ---------- 6. La cláusula: la seña del nombre ------------------------- */
 
-  .hero-meta li:not(:last-child)::after {
-    content: "·";
-    margin-left: .75rem;
-    color: var(--rule);
-  }
-
-  /* ---------- 9. La cláusula: pieza gráfica de la portada ---------------- */
-
-  /* Un fragmento de contrato real, con la letra diminuta que nadie lee y la
-     cláusula abusiva subrayada. Es el concepto del despacho, dibujado. */
+  /* Un fragmento de contrato con la letra diminuta que nadie lee y la
+     cláusula abusiva marcada. Es lo que significa el nombre del despacho. */
   .clause {
-    position: relative;
     margin: 0;
-    background: var(--surface);
-    border: 1px solid var(--rule);
-    padding: 1.5rem 1.6rem 1.4rem;
-    box-shadow: 6px 6px 0 var(--paper-deep);
+    background: var(--white);
+    color: var(--ink);
+    padding: 1.6rem 1.7rem 1.4rem;
+    border-top: 3px solid var(--gold);
+    box-shadow: 0 18px 40px rgba(0, 0, 0, .28);
   }
 
   .clause-head {
-    font-family: var(--f-sc);
-    font-size: .88rem;
-    letter-spacing: .08em;
+    font-size: .72rem;
+    font-weight: 600;
+    letter-spacing: .12em;
+    text-transform: uppercase;
     color: var(--ink-faint);
     padding-bottom: .7rem;
     margin-bottom: .9rem;
-    border-bottom: 1px solid var(--rule-soft);
+    border-bottom: 1px solid var(--line);
   }
 
   .clause-body {
     font-family: var(--f-display);
-    font-size: .83rem;      /* la letra pequeña, literal */
-    line-height: 1.62;
+    font-size: .85rem;      /* la letra pequeña, literal */
+    line-height: 1.6;
     color: var(--ink-soft);
     text-align: justify;
     margin: 0;
-    max-width: none;
   }
 
-  .clause-body b { font-weight: 500; color: var(--ink); }
+  .clause-body b { font-weight: 600; color: var(--ink); }
+
+  .clause mark {
+    background: linear-gradient(transparent 55%, var(--gold-wash) 55%, var(--gold-wash) 95%, transparent 95%);
+    color: var(--ink);
+    padding: 0 .06em;
+  }
 
   .clause-note {
     display: flex;
-    align-items: flex-start;
-    gap: .45rem;
+    gap: .5rem;
     margin-top: 1.1rem;
     padding-top: .9rem;
-    border-top: 1px dashed var(--rule);
-  }
-
-  .clause-note .arrow {
-    color: var(--anno);
-    font-size: .9rem;
-    line-height: 1.5;
+    border-top: 1px dashed var(--line);
+    font-family: var(--f-display);
+    font-style: italic;
+    font-size: 1.08rem;
+    line-height: 1.4;
+    color: var(--gold-text);
   }
 
   .clause-cite {
-    font-family: var(--f-body);
-    font-style: italic;
-    font-size: .8rem;
+    font-size: .76rem;
     line-height: 1.5;
     color: var(--ink-faint);
-    margin: .9rem 0 0;
-    max-width: none;
+    margin: .8rem 0 0;
   }
 
-  @media (max-width: 900px) {
-    .clause { box-shadow: 4px 4px 0 var(--paper-deep); }
-    .clause-body { text-align: left; font-size: .85rem; }
+  @media (max-width: 900px) { .clause-body { text-align: left; } }
+
+  /* ---------- 7. Franja de datos ----------------------------------------- */
+
+  .stats {
+    background: var(--cream);
+    border-bottom: 1px solid var(--line);
   }
 
-  /* ---------- 10. Áreas de trabajo --------------------------------------- */
+  .stats ul {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    margin: 0 auto;
+    padding-block: 1.8rem;
+    list-style: none;
+    text-align: center;
+  }
+
+  .stats li + li { border-left: 1px solid var(--line); }
+
+  .stats b {
+    display: block;
+    font-family: var(--f-display);
+    font-size: clamp(1.8rem, 3.6vw, 2.4rem);
+    font-weight: 500;
+    line-height: 1.1;
+    color: var(--navy);
+  }
+
+  .stats span { font-size: .85rem; color: var(--ink-soft); }
+
+  @media (max-width: 700px) {
+    .stats ul { grid-template-columns: repeat(2, minmax(0, 1fr)); row-gap: 1.4rem; }
+    .stats li + li { border-left: 0; }
+  }
+
+  /* ---------- 8. Secciones ----------------------------------------------- */
+
+  .section {
+    padding-block: clamp(3.5rem, 8vw, 6rem);
+    scroll-margin-top: var(--header);
+  }
+
+  .section-alt { background: var(--cream); }
+
+  .section-head { max-width: 48rem; margin-bottom: 2.5rem; }
+
+  .section-head h2 {
+    font-family: var(--f-display);
+    font-size: clamp(2rem, 4.2vw, 2.75rem);
+    line-height: 1.15;
+    color: var(--navy);
+  }
+
+  .section-head h2::after {
+    content: "";
+    display: block;
+    width: 3.5rem;
+    height: 2px;
+    background: var(--gold);
+    margin-top: 1.1rem;
+  }
+
+  .lede {
+    font-size: 1.12rem;
+    line-height: 1.65;
+    color: var(--ink-soft);
+    max-width: var(--measure);
+    margin: 1.2rem 0 0;
+  }
+
+  .flow p { max-width: var(--measure); }
+
+  .note { font-size: .88rem; color: var(--ink-faint); margin: .8rem 0 0; }
+
+  /* Recuadro de normativa: lo que antes iba en la columna del margen. */
+  .norms {
+    margin-top: 2.5rem;
+    padding: 1.2rem 1.4rem;
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-left: 3px solid var(--gold);
+  }
+
+  .section-alt .norms { background: var(--white); }
+  .section:not(.section-alt) .norms { background: var(--cream); }
+
+  .norms h3 {
+    font-family: var(--f-body);
+    font-size: .76rem;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--gold-text);
+    margin-bottom: .6rem;
+  }
+
+  .norms ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(22rem, 100%), 1fr));
+    gap: .35rem 2rem;
+    font-size: .9rem;
+    color: var(--ink-soft);
+  }
+
+  /* ---------- 9. Áreas de práctica --------------------------------------- */
+
+  .intro-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 0 3rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .intro-grid .section-head { margin-bottom: 0; }
+  .intro-grid .flow { align-self: end; }
+  .intro-grid .flow p { margin: 0; }
+
+  @media (max-width: 880px) {
+    .intro-grid { grid-template-columns: minmax(0, 1fr); gap: 1.2rem; }
+  }
 
   .areas {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(14.5rem, 1fr));
-    gap: 0 2.5rem;
-    margin-top: 1.75rem;
-    border-top: 1px solid var(--rule-soft);
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+    gap: 1.25rem;
   }
 
   .area {
-    padding-block: 1.3rem 1.4rem;
-    border-bottom: 1px solid var(--rule-soft);
+    background: var(--white);
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--gold);
+    padding: 1.4rem 1.4rem 1.5rem;
+    transition: box-shadow .2s ease, transform .2s ease;
   }
 
-  .area h4 {
-    font-family: var(--f-body);
-    font-size: .94rem;
-    font-weight: 600;
-    margin-bottom: .25rem;
+  .area:hover { box-shadow: 0 10px 28px rgba(20, 40, 75, .09); transform: translateY(-2px); }
+
+  .area h3 {
+    font-family: var(--f-display);
+    font-size: 1.3rem;
+    line-height: 1.2;
+    color: var(--navy);
+    margin-bottom: .5rem;
   }
 
-  .area p {
-    margin: 0;
-    font-size: .87rem;
+  .area p { margin: 0; font-size: .92rem; color: var(--ink-soft); line-height: 1.55; }
+
+  /* ---------- 10. Equipo -------------------------------------------------- */
+
+  .team-facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: .4rem 1.5rem;
+    margin: 1rem 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: .9rem;
     color: var(--ink-soft);
-    line-height: 1.55;
   }
 
-  /* ---------- 11. Equipo --------------------------------------------------- */
+  .team-facts li::before { content: "—"; color: var(--gold); margin-right: .45rem; }
 
-  /* Índice: ocho fichas son mucho scroll, sobre todo en el móvil.
-     Esta rejilla da la vista de conjunto y salta a cada una. */
-  .roster {
+  .team {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    column-gap: 2rem;
-    row-gap: 0;
-    margin: 1.75rem 0 .5rem;
-    border-top: 1px solid var(--rule);
-    list-style: none;
-    padding: 0;
+    gap: 1.5rem;
   }
 
-  .roster li {
-    display: flex;
-    border-bottom: 1px solid var(--rule-soft);
-  }
-
-  .roster a {
-    flex: 1;
-    padding: .8rem 1rem .85rem 0;
-    text-decoration: none;
-    transition: background-color .15s ease;
-  }
-
-  .roster a:hover { background: var(--surface); }
-
-  @media (min-width: 900px) { .roster { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
-  @media (max-width: 420px)  { .roster { grid-template-columns: minmax(0, 1fr); } }
-
-  .roster .r-name {
-    display: block;
-    font-family: var(--f-display);
-    font-size: 1.1rem;
-    text-transform: lowercase;
-    line-height: 1.25;
-  }
-
-  .roster .r-area {
-    display: block;
-    font-family: var(--f-sc);
-    font-size: .85rem;
-    letter-spacing: .045em;
-    color: var(--ink-faint);
-    margin-top: .2rem;
-  }
-
-  .team { margin-top: 2.25rem; }
+  @media (max-width: 880px) { .team { grid-template-columns: minmax(0, 1fr); } }
 
   .lawyer {
-    display: grid;
-    grid-template-columns: 4.75rem minmax(0, 1fr);
-    gap: 0 1.6rem;
-    padding-block: 2rem;
-    border-top: 1px solid var(--rule-soft);
-    scroll-margin-top: calc(var(--bar) + 1rem);
+    background: var(--white);
+    border: 1px solid var(--line);
+    padding: 1.8rem;
+    scroll-margin-top: calc(var(--header) + 1rem);
   }
 
-  .lawyer:first-child { border-top: 1px solid var(--rule); }
+  .lawyer-head {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+    padding-bottom: 1.1rem;
+    margin-bottom: 1.1rem;
+    border-bottom: 1px solid var(--line);
+  }
 
-  /* Retrato = monograma tipográfico. No hay fotos y no se finge que las haya. */
+  /* Retrato = iniciales. No hay fotos y no se finge que las haya. */
   .monogram {
-    width: 4.75rem;
-    height: 5.75rem;
+    width: 4rem;
+    height: 4rem;
     display: grid;
     place-items: center;
-    background: var(--surface);
-    border: 1px solid var(--rule);
-    border-top: 2px solid var(--marker);
-    font-family: var(--f-display);
-    font-size: 1.4rem;
-    letter-spacing: .03em;
-    color: var(--ink-soft);
-    text-transform: lowercase;
     flex-shrink: 0;
+    background: var(--navy);
+    color: var(--gold);
+    font-family: var(--f-display);
+    font-size: 1.15rem;
+    letter-spacing: .06em;
   }
 
   .lawyer-name {
     font-family: var(--f-display);
-    font-size: 1.58rem;
+    font-size: 1.45rem;
     line-height: 1.15;
-    text-transform: lowercase;
-    margin-bottom: .15rem;
+    color: var(--navy);
   }
 
   .lawyer-role {
-    font-family: var(--f-sc);
-    font-size: .95rem;
-    font-weight: 500;
-    letter-spacing: .045em;
-    color: var(--anno);
-    margin: 0 0 .8rem;
+    font-size: .76rem;
+    font-weight: 600;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    line-height: 1.45;
+    color: var(--gold-text);
+    margin: .35rem 0 0;
   }
 
-  .lawyer-bio {
-    margin: 0 0 .85rem;
-    font-size: .93rem;
-    max-width: min(58ch, 100%);
-  }
+  .lawyer-bio { margin: 0 0 1rem; font-size: .94rem; color: var(--ink-soft); }
 
   .lawyer-voice {
     font-family: var(--f-display);
     font-style: italic;
-    font-size: 1.12rem;
+    font-size: 1.1rem;
     line-height: 1.5;
-    color: var(--ink-soft);
-    max-width: min(52ch, 100%);
-    margin: 0 0 .85rem;
-    padding-left: .9rem;
-    border-left: 2px solid var(--marker);
+    color: var(--ink);
+    margin: 0 0 1.1rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--gold);
   }
 
   .facts {
     display: flex;
     flex-wrap: wrap;
-    gap: .3rem .4rem;
+    gap: .4rem;
     margin: 0;
     padding: 0;
     list-style: none;
-    font-family: var(--f-sc);
-    font-size: .855rem;
-    letter-spacing: .035em;
+    font-size: .8rem;
   }
 
   .facts li {
-    border: 1px solid var(--rule);
+    background: var(--cream);
     color: var(--ink-soft);
-    padding: .2rem .5rem;
+    padding: .2rem .6rem;
+    border-radius: 2px;
   }
 
-  .facts li.jur-it { border-color: var(--anno); color: var(--anno); }
+  /* Lo que es de la jurisdicción italiana se distingue sin gritar. */
+  .facts li.jur-it { background: transparent; border: 1px solid var(--gold); color: var(--gold-text); }
 
-  /* En móvil el monograma se pone AL LADO del nombre en vez de encima:
-     apilado se comía una pantalla entera antes de empezar a leer. */
-  @media (max-width: 640px) {
-    .lawyer { grid-template-columns: minmax(0, 1fr); gap: .85rem; }
-
-    .lawyer-head {
-      display: flex;
-      align-items: center;
-      gap: .9rem;
-    }
-
-    .monogram {
-      width: 3.1rem;
-      height: 3.1rem;
-      font-size: 1rem;
-      border-top-width: 2px;
-    }
-
-    .lawyer-name { font-size: 1.35rem; }
+  @media (max-width: 480px) {
+    .lawyer { padding: 1.3rem; }
+    .monogram { width: 3.2rem; height: 3.2rem; font-size: .95rem; }
+    .lawyer-name { font-size: 1.3rem; }
   }
 
-  /* En pantallas anchas la cabecera se disuelve (display:contents) y sus dos
-     hijos entran directamente en la rejilla de la ficha: el monograma a la
-     columna estrecha ocupando las dos filas, el nombre y el cuerpo a la ancha.
-     Sin declarar la columna del cuerpo, este caeria bajo el monograma. */
-  @media (min-width: 641px) {
-    .lawyer-head { display: contents; }
+  /* ---------- 11. España · Italia ----------------------------------------- */
 
-    .lawyer > .lawyer-head > .monogram {
-      grid-column: 1;
-      grid-row: 1 / span 2;
-      align-self: start;
-    }
-
-    .lawyer > .lawyer-head > .lawyer-name { grid-column: 2; }
-    .lawyer > .lawyer-body { grid-column: 2; }
-  }
-
-  /* ---------- 12. España · Italia ----------------------------------------- */
-
-  .bridge {
-    background: var(--surface);
-    border: 1px solid var(--rule);
-    padding: clamp(1.25rem, 4vw, 2.25rem);
-    margin-top: 1.5rem;
-  }
-
-  .bridge-grid {
+  .compare {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(15.5rem, 1fr));
-    gap: 1.75rem 2.5rem;
-    margin-top: 1.6rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    border: 1px solid var(--line);
+    background: var(--white);
   }
 
-  .bridge-col h4 {
-    font-family: var(--f-sc);
-    font-size: .97rem;
-    letter-spacing: .06em;
-    color: var(--ink-faint);
-    padding-bottom: .5rem;
-    margin-bottom: .8rem;
-    border-bottom: 1px solid var(--rule);
+  @media (max-width: 760px) { .compare { grid-template-columns: minmax(0, 1fr); } }
+
+  .compare-col + .compare-col { border-left: 1px solid var(--line); }
+
+  @media (max-width: 760px) {
+    .compare-col + .compare-col { border-left: 0; border-top: 1px solid var(--line); }
   }
 
-  .bridge-col ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    font-size: .88rem;
-    line-height: 1.5;
+  .compare-col h3 {
+    background: var(--navy);
+    color: var(--white);
+    font-family: var(--f-display);
+    font-size: 1.35rem;
+    padding: .8rem 1.4rem;
   }
 
-  .bridge-col li {
-    padding-block: .55rem;
-    border-bottom: 1px solid var(--rule-soft);
-  }
+  .compare-col:last-child h3 { background: var(--navy-deep); }
 
-  .bridge-col li:last-child { border-bottom: 0; }
+  .compare-col ul { margin: 0; padding: 0 1.4rem; list-style: none; font-size: .94rem; line-height: 1.55; }
 
-  .bridge-col code {
+  .compare-col li { padding-block: 1rem; border-bottom: 1px solid var(--line); }
+  .compare-col li:last-child { border-bottom: 0; }
+
+  .compare-col .ref {
     display: block;
     font-family: var(--f-display);
     font-style: italic;
-    font-size: .92rem;
-    color: var(--ink-faint);
-    margin-top: .25rem;
+    font-size: .95rem;
+    color: var(--gold-text);
+    margin-top: .3rem;
   }
 
-  /* ---------- 13. Casos y opiniones --------------------------------------- */
+  .compare-title {
+    font-family: var(--f-display);
+    font-size: 1.5rem;
+    color: var(--navy);
+    margin: 2.5rem 0 1.2rem;
+  }
+
+  /* ---------- 12. Casos ---------------------------------------------------- */
 
   .cases {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(18.5rem, 1fr));
-    gap: 0 3rem;
-    margin-top: 1.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
+    gap: 1.5rem;
   }
 
   .case {
-    padding-block: 1.75rem;
-    border-top: 1px solid var(--rule-soft);
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    border: 1px solid var(--line);
+    padding: 1.8rem 1.8rem 1.5rem;
+  }
+
+  .case::before {
+    content: "“";
+    font-family: var(--f-display);
+    font-size: 4rem;
+    line-height: .6;
+    height: 1.6rem;
+    color: var(--gold);
   }
 
   .case blockquote {
     font-family: var(--f-display);
-    font-size: 1.2rem;
-    line-height: 1.45;
-    margin: 0 0 1rem;
-    text-indent: -.4em;
-  }
-
-  .case-who { font-size: .85rem; font-weight: 500; margin: 0 0 .15rem; }
-
-  .case-what {
-    font-size: .82rem;
-    color: var(--ink-soft);
-    margin: 0 0 .65rem;
+    font-size: 1.12rem;
     line-height: 1.5;
+    color: var(--ink);
+    margin: 0 0 1.2rem;
   }
+
+  .case-who { font-weight: 600; font-size: .92rem; color: var(--navy); margin: 0; }
+  .case-where { font-size: .85rem; color: var(--ink-faint); margin: 0 0 .9rem; }
+
+  .case-what { font-size: .88rem; color: var(--ink-soft); line-height: 1.55; margin: 0 0 1rem; }
 
   .case-file {
-    font-family: var(--f-body);
+    margin: auto 0 0;
+    padding-top: .9rem;
+    border-top: 1px solid var(--line);
     font-size: .84rem;
-    color: var(--ink-faint);
-    margin: 0;
-    padding-top: .55rem;
-    border-top: 1px solid var(--rule-soft);
-    line-height: 1.6;
-  }
-
-  .case-file b {
-    font-family: var(--f-sc);
-    font-weight: 500;
-    letter-spacing: .04em;
+    line-height: 1.65;
     color: var(--ink-soft);
   }
 
-  /* ---------- 14. Cómo trabajamos ----------------------------------------- */
+  .case-file b { color: var(--gold-text); font-weight: 600; }
+
+  /* ---------- 13. Cómo trabajamos ----------------------------------------- */
 
   /* Aquí la numeración sí informa: es una secuencia, y el orden importa. */
   .steps {
     counter-reset: paso;
-    margin-top: 1.75rem;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 2rem;
+    margin: 0;
     padding: 0;
     list-style: none;
   }
 
-  .steps li {
-    counter-increment: paso;
-    display: grid;
-    grid-template-columns: 2.5rem minmax(0, 1fr);
-    gap: 0 1rem;
-    padding-block: 1.1rem;
-    border-top: 1px solid var(--rule-soft);
-    max-width: var(--measure);
-  }
+  @media (max-width: 960px) { .steps { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 560px) { .steps { grid-template-columns: minmax(0, 1fr); gap: 1.6rem; } }
+
+  .steps li { counter-increment: paso; }
 
   .steps li::before {
-    content: counter(paso, decimal-leading-zero);
+    content: counter(paso);
+    display: grid;
+    place-items: center;
+    width: 3rem;
+    height: 3rem;
+    margin-bottom: 1rem;
+    border-radius: 50%;
+    background: var(--navy);
+    color: var(--gold);
     font-family: var(--f-display);
-    font-size: 1rem;
-    font-variant-numeric: tabular-nums;
-    color: var(--ink-faint);
-    padding-top: .3rem;
+    font-size: 1.35rem;
   }
-
-  /* Cada paso es una rejilla de dos columnas (numero | texto) con TRES hijos:
-     el ::before del numero, el titulo y la descripcion. Sin decirle a los dos
-     ultimos que van en la columna 2, el navegador manda la descripcion a la
-     fila siguiente y columna 1 — la de 2,5 rem — y el texto se parte letra a
-     letra. Colocarlos explicitamente es lo que arregla la seccion. */
-  .steps b,
-  .steps span { grid-column: 2; }
 
   .steps b {
     display: block;
-    font-weight: 600;
-    font-size: 1rem;
-    margin-bottom: .1rem;
-  }
-
-  .steps span {
-    font-size: .95rem;
-    color: var(--ink-soft);
-    line-height: 1.55;
-  }
-
-  /* En movil el numero se pega mas al texto: 2,5 rem de sangria en una
-     pantalla de 390 px es ancho que le falta a la descripcion. */
-  @media (max-width: 560px) {
-    .steps li { grid-template-columns: 1.9rem minmax(0, 1fr); gap: 0 .65rem; }
-  }
-
-  /* ---------- 15. Contacto ------------------------------------------------- */
-
-  .contact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
-    gap: 1.5rem 2.5rem;
-    margin: 1.75rem 0 2rem;
-  }
-
-  .contact-grid h4 {
-    font-family: var(--f-sc);
-    font-size: .95rem;
-    letter-spacing: .06em;
-    color: var(--ink-faint);
+    font-family: var(--f-display);
+    font-size: 1.25rem;
+    font-weight: 500;
+    line-height: 1.25;
+    color: var(--navy);
     margin-bottom: .45rem;
   }
 
-  .contact-grid p { margin: 0; font-size: .92rem; line-height: 1.6; }
-  .contact-grid a { text-decoration-color: var(--marker); text-underline-offset: 3px; }
+  .steps span { display: block; font-size: .93rem; color: var(--ink-soft); line-height: 1.55; }
 
-  /* ---------- 16. Pie ------------------------------------------------------ */
+  /* ---------- 14. Contacto ------------------------------------------------- */
 
-  footer {
-    border-top: 1px solid var(--rule);
-    padding-block: 2rem 3rem;
-    font-size: .8rem;
-    color: var(--ink-faint);
+  .contact {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr);
+    gap: 2.5rem 4rem;
+    align-items: start;
   }
 
-  .disclaimer {
-    font-family: var(--f-body);
-    font-size: .84rem;
-    line-height: 1.6;
-    max-width: min(70ch, 100%);
-    margin: 0 0 1.5rem;
-    padding: .9rem 1rem;
-    border: 1px dashed var(--rule);
+  @media (max-width: 880px) { .contact { grid-template-columns: minmax(0, 1fr); } }
+
+  .contact .section-head { margin-bottom: 1.8rem; }
+
+  .contact-cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+  }
+
+  @media (max-width: 520px) { .contact-cards { grid-template-columns: minmax(0, 1fr); } }
+
+  .contact-card {
+    background: var(--white);
+    border: 1px solid var(--line);
+    padding: 1.2rem 1.3rem;
+  }
+
+  .contact-card h3 {
+    font-size: .76rem;
+    font-weight: 700;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--gold-text);
+    margin-bottom: .45rem;
+  }
+
+  .contact-card p { margin: 0; font-size: .95rem; line-height: 1.6; }
+  .contact-card a { text-decoration-color: var(--gold); text-underline-offset: 3px; }
+
+  .access {
+    margin: 1.2rem 0 0;
+    padding: 0;
+    list-style: none;
+    font-size: .9rem;
     color: var(--ink-soft);
   }
+
+  .access li::before { content: "✓"; color: var(--gold-text); margin-right: .55rem; }
+
+  /* ---------- 15. Pie ------------------------------------------------------ */
+
+  .site-footer {
+    background: var(--navy-deep);
+    color: var(--on-navy-soft);
+    padding-block: 3rem 2.5rem;
+    font-size: .85rem;
+  }
+
+  .footer-brand { margin-bottom: 1.6rem; }
+  .footer-brand .brand-name { color: var(--white); }
+  .footer-brand .brand-sub { color: var(--gold); }
+
+  .disclaimer {
+    max-width: min(75ch, 100%);
+    margin: 0 0 2rem;
+    padding: 1rem 1.2rem;
+    border: 1px solid rgba(255, 255, 255, .16);
+    line-height: 1.65;
+  }
+
+  .disclaimer strong { color: var(--white); letter-spacing: .06em; }
 
   .foot-row {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     gap: .4rem 2rem;
+    padding-top: 1.2rem;
+    border-top: 1px solid rgba(255, 255, 255, .12);
   }
 
-  /* ---------- 17. Movimiento e impresión ---------------------------------- */
+  /* ---------- 16. Movimiento e impresión ---------------------------------- */
 
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
-    * { animation: none !important; transition: none !important; }
+    * { transition: none !important; }
   }
 
   /* El README explica cómo entregarla en PDF: que salga bien impresa. */
   @media print {
-    :root {
-      --paper: #fff; --surface: #fff; --paper-deep: #fff;
-      --ink: #000; --ink-soft: #333; --ink-faint: #555;
-      --rule: #999; --rule-soft: #ccc; --on-ink: #fff;
-    }
-    .topbar, .actions, .roster { display: none; }
-    .band, .hero { padding-block: 1.25rem; }
-    .lawyer, .case, .clause, .bridge { break-inside: avoid; }
+    :root { --cream: #fff; --navy: #14284B; }
+    body { font-size: 12pt; }
+    .topstrip, .site-header, .actions, .site-nav { display: none; }
+    .hero { background: #fff; color: var(--ink); padding-block: 1rem; }
+    .hero h1, .hero-claim { color: var(--navy); }
+    .hero-sub { color: var(--ink-soft); }
+    .clause { box-shadow: none; border: 1px solid var(--line); }
+    .section { padding-block: 1.5rem; }
+    .lawyer, .case, .clause, .compare, .area, .steps li { break-inside: avoid; }
     h2 { break-after: avoid; }
-    .clause { box-shadow: none; }
+    .site-footer { background: #fff; color: var(--ink-soft); }
+    .footer-brand .brand-name { color: var(--navy); }
+    .disclaimer { border-color: var(--line); }
+    .disclaimer strong { color: var(--ink); }
     a { text-decoration: none; }
   }
 </style>
 </head>
 <body>
-<header class="topbar">
-  <div class="topbar-inner">
-    <a class="wordmark" href="#top">la letra pequeña <i>· abogados del trabajo</i></a>
-    <nav aria-label="Secciones">
+
+<div class="topstrip">
+  <div class="container">
+    <ul>
+      <li>Calle Alfonso XII, 34 · Sevilla</li>
+      <li><a href="tel:+34954000000">954 00 00 00</a></li>
+      <li><a href="mailto:hola@laletrapequena.es">hola@laletrapequena.es</a></li>
+    </ul>
+    <span class="hours">Lunes a jueves 9:00–18:00 · Viernes 9:00–15:00</span>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container">
+    <a class="brand" href="#top">
+      <span class="brand-name">La letra pequeña</span>
+      <span class="brand-sub">Abogados laboralistas</span>
+    </a>
+    <nav class="site-nav" aria-label="Secciones">
       <a href="#despacho">El despacho</a>
       <a href="#equipo">Equipo</a>
       <a href="#espana-italia">España · Italia</a>
       <a href="#casos">Casos</a>
       <a href="#como">Cómo trabajamos</a>
       <a href="#contacto">Contacto</a>
+      <a class="btn btn-gold" href="#contacto">Consulta gratuita</a>
     </nav>
   </div>
 </header>
 
-<div class="wrap" id="top">
+<main id="top">
 
   <!-- ================= PORTADA ================= -->
   <section class="hero">
-    <div>
-      <h1 class="hero-mark">la letra pequeña
-        <span class="small">abogados del trabajo y de la seguridad social</span>
-      </h1>
-      <p class="hero-claim">La letra pequeña de tu contrato es la que decide tu vida. <mark>Aquí la leemos contigo, en voz alta y en tu idioma.</mark></p>
-      <p class="hero-sub">Ocho abogadas y abogados que atienden de una en una: quien te coge el teléfono el primer día es quien te acompaña a la vista. Sin intermediarios y sin jerga innecesaria.</p>
-      <div class="actions">
-        <a class="btn btn-primary" href="#contacto">Pide tu primera consulta</a>
-        <a class="btn btn-ghost" href="#equipo">Conoce al equipo</a>
+    <div class="container">
+      <div>
+        <span class="eyebrow">Abogados del trabajo y de la Seguridad Social · Sevilla</span>
+        <h1>La letra pequeña de tu contrato es la que decide tu vida.</h1>
+        <hr class="hero-rule">
+        <p class="hero-claim">Aquí la leemos contigo, en voz alta y en tu idioma.</p>
+        <p class="hero-sub">Ocho abogadas y abogados que atienden de una en una: quien te coge el teléfono el primer día es quien te acompaña a la vista. Sin intermediarios y sin jerga innecesaria.</p>
+        <div class="actions">
+          <a class="btn btn-gold" href="#contacto">Pide tu primera consulta</a>
+          <a class="btn btn-outline-light" href="#equipo">Conoce al equipo</a>
+        </div>
       </div>
-      <ul class="hero-meta">
-        <li>Sevilla</li>
-        <li>Español e italiano</li>
-        <li>Primera consulta sin coste</li>
-        <li>Desde 2009</li>
-      </ul>
-    </div>
 
-    <figure class="clause">
-      <div class="clause-head">Contrato de trabajo · cláusula 7.ª · página 4 de 6</div>
-      <p class="clause-body">
-        <b>Séptima. Movilidad y disponibilidad.</b> El trabajador manifiesta conocer y aceptar
-        que la prestación de servicios podrá desarrollarse en cualquiera de los centros de
-        trabajo de la empresa, así como en los de las sociedades del grupo, <mark>sin que dicha
-        modificación tenga la consideración de sustancial a los efectos previstos en el
-        artículo 41 del Estatuto de los Trabajadores</mark>, comprometiéndose asimismo a la
-        realización de aquellas funciones análogas o equivalentes que le sean encomendadas,
-        renunciando expresamente a cuantas reclamaciones pudieran derivarse de lo anterior.
-      </p>
-      <div class="clause-note">
-        <span class="arrow" aria-hidden="true">↑</span>
-        <span class="hand">esto no se puede renunciar. y es la línea que nadie lee.</span>
-      </div>
-      <p class="clause-cite">Cláusula de ejemplo. Art. 1288 Código Civil: «la interpretación de las cláusulas oscuras no deberá favorecer a la parte que hubiese ocasionado la oscuridad».</p>
-    </figure>
+      <figure class="clause">
+        <div class="clause-head">Contrato de trabajo · Cláusula 7.ª · Página 4 de 6</div>
+        <p class="clause-body">
+          <b>Séptima. Movilidad y disponibilidad.</b> El trabajador manifiesta conocer y aceptar
+          que la prestación de servicios podrá desarrollarse en cualquiera de los centros de
+          trabajo de la empresa, así como en los de las sociedades del grupo, <mark>sin que dicha
+          modificación tenga la consideración de sustancial a los efectos previstos en el
+          artículo 41 del Estatuto de los Trabajadores</mark>, comprometiéndose asimismo a la
+          realización de aquellas funciones análogas o equivalentes que le sean encomendadas,
+          renunciando expresamente a cuantas reclamaciones pudieran derivarse de lo anterior.
+        </p>
+        <div class="clause-note">
+          <span aria-hidden="true">↑</span>
+          <span>A esto no se puede renunciar. Y es la línea que nadie lee.</span>
+        </div>
+        <p class="clause-cite">Cláusula de ejemplo. Art. 1288 Código Civil: «la interpretación de las cláusulas oscuras no deberá favorecer a la parte que hubiese ocasionado la oscuridad».</p>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ================= DATOS ================= -->
+  <section class="stats" aria-label="El despacho en cifras">
+    <ul class="container">
+      <li><b>2009</b><span>Año de fundación</span></li>
+      <li><b>8</b><span>Abogadas y abogados</span></li>
+      <li><b>2</b><span>Jurisdicciones: España e Italia</span></li>
+      <li><b>0 €</b><span>Primera consulta</span></li>
+    </ul>
   </section>
 
   <!-- ================= EL DESPACHO ================= -->
-  <section class="band" id="despacho">
-    <div class="rail">
-      <span class="tag">Normas de cabecera</span>
-      <p>RDLeg. 2/2015 — Estatuto de los Trabajadores</p>
-      <p>RDLeg. 8/2015 — Ley General de la Seguridad Social</p>
-      <p>Ley 36/2011 — Ley Reguladora de la Jurisdicción Social</p>
-      <p class="it">R.D. 16 luglio 1942, n. 262 — Codice Civile, libro V</p>
-    </div>
-    <div class="flow">
-      <h2>Un despacho que se explica</h2>
-      <p class="lede">Nacimos en 2009, en plena destrucción de empleo, atendiendo a gente que llegaba con una carta que no entendía. Esa sigue siendo la escena y sigue siendo el trabajo: <mark>traducir el papel antes de pelearlo</mark>.</p>
-      <p>Llevamos exclusivamente derecho del trabajo y de la seguridad social. No tocamos nada más, y esa es la razón por la que podemos decirte el primer día si tu asunto tiene recorrido o no lo tiene. Cuando no lo tiene, lo decimos igual.</p>
+  <section class="section" id="despacho">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="section-head">
+          <span class="eyebrow">El despacho</span>
+          <h2>Un despacho que se explica</h2>
+          <p class="lede">Nacimos en 2009, en plena destrucción de empleo, atendiendo a gente que llegaba con una carta que no entendía. Esa sigue siendo la escena y sigue siendo el trabajo: traducir el papel antes de pelearlo.</p>
+        </div>
+        <div class="flow">
+          <p>Llevamos exclusivamente derecho del trabajo y de la Seguridad Social. No tocamos nada más, y esa es la razón por la que podemos decirte el primer día si tu asunto tiene recorrido o no lo tiene. Cuando no lo tiene, lo decimos igual.</p>
+        </div>
+      </div>
 
       <div class="areas">
         <div class="area">
-          <h4>Despido y extinción</h4>
+          <h3>Despido y extinción</h3>
           <p>Disciplinario, objetivo, colectivo y extinción a instancia del trabajador por incumplimiento grave de la empresa.</p>
         </div>
         <div class="area">
-          <h4>Seguridad Social</h4>
+          <h3>Seguridad Social</h3>
           <p>Incapacidad temporal y permanente, jubilación, viudedad, prestaciones denegadas y reclamaciones previas al INSS.</p>
         </div>
         <div class="area">
-          <h4>Igualdad y derechos fundamentales</h4>
+          <h3>Igualdad y derechos fundamentales</h3>
           <p>Acoso, discriminación, conciliación, planes de igualdad y tutela cuando hay un derecho fundamental en juego.</p>
         </div>
         <div class="area">
-          <h4>Accidente y enfermedad profesional</h4>
+          <h3>Accidente y enfermedad profesional</h3>
           <p>Determinación de contingencia, recargo de prestaciones e indemnización por daños.</p>
         </div>
         <div class="area">
-          <h4>Negociación colectiva</h4>
+          <h3>Negociación colectiva</h3>
           <p>Convenios, conflicto colectivo, elecciones sindicales, huelga y asesoramiento a comités de empresa.</p>
         </div>
         <div class="area">
-          <h4>Trabajo digital y plataformas</h4>
+          <h3>Trabajo digital y plataformas</h3>
           <p>Teletrabajo, control empresarial, desconexión, falsos autónomos y decisiones automatizadas en recursos humanos.</p>
         </div>
         <div class="area">
-          <h4>Movilidad España–Italia</h4>
+          <h3>Movilidad España–Italia</h3>
           <p>Desplazamiento de trabajadores, carreras de cotización en dos países y contratos sometidos a derecho italiano.</p>
         </div>
         <div class="area">
-          <h4>Asesoramiento a pymes</h4>
+          <h3>Asesoramiento a pymes</h3>
           <p>Contratación, nóminas, sanciones de Inspección y prevención del conflicto antes de que llegue al juzgado.</p>
         </div>
       </div>
+
+      <aside class="norms">
+        <h3>Normativa aplicable</h3>
+        <ul>
+          <li>RDLeg. 2/2015 — Estatuto de los Trabajadores</li>
+          <li>RDLeg. 8/2015 — Ley General de la Seguridad Social</li>
+          <li>Ley 36/2011 — Ley Reguladora de la Jurisdicción Social</li>
+          <li>R.D. 16 luglio 1942, n. 262 — <i>Codice Civile</i>, libro V</li>
+        </ul>
+      </aside>
     </div>
   </section>
 
   <!-- ================= EQUIPO ================= -->
-  <section class="band" id="equipo">
-    <div class="rail">
-      <span class="tag">El equipo</span>
-      <p>Ocho profesionales. Seis abogadas y dos abogados.</p>
-      <p>Siete colegiados en España; uno además <span class="it">avvocato</span> inscrito en Italia.</p>
-      <p>Cada asunto tiene un nombre y un teléfono directo.</p>
-    </div>
-    <div class="flow">
-      <h2>Quién te va a llevar el caso</h2>
-      <p class="lede">Repartimos por especialidad, no por carga de trabajo. Si tu problema es de cotizaciones, no te lo lleva quien negocia convenios.</p>
-
-      <ul class="roster">
-        <li><a href="#l-mrb"><span class="r-name">mari carmen rodríguez baena</span><span class="r-area">Despido colectivo</span></a></li>
-        <li><a href="#l-rg"><span class="r-name">roberto gismondo</span><span class="r-area">España · Italia</span></a></li>
-        <li><a href="#l-tcm"><span class="r-name">teresa claramunt moreno</span><span class="r-area">Seguridad Social</span></a></li>
-        <li><a href="#l-esp"><span class="r-name">eva maría sánchez paz</span><span class="r-area">Igualdad y acoso</span></a></li>
-        <li><a href="#l-pp"><span class="r-name">paola pérez</span><span class="r-area">Negociación colectiva</span></a></li>
-        <li><a href="#l-adl"><span class="r-name">amanda díaz lópez</span><span class="r-area">Accidente de trabajo</span></a></li>
-        <li><a href="#l-dbe"><span class="r-name">daniel berrio echeverría</span><span class="r-area">Plataformas digitales</span></a></li>
-        <li><a href="#l-art"><span class="r-name">alba ruiz tejero</span><span class="r-area">Teletrabajo y datos</span></a></li>
-      </ul>
+  <section class="section section-alt" id="equipo">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Equipo</span>
+        <h2>Quién te va a llevar el caso</h2>
+        <p class="lede">Repartimos por especialidad, no por carga de trabajo. Si tu problema es de cotizaciones, no te lo lleva quien negocia convenios.</p>
+        <ul class="team-facts">
+          <li>Ocho profesionales: seis abogadas y dos abogados</li>
+          <li>Siete colegiados en España; uno además <i>avvocato</i> inscrito en Italia</li>
+          <li>Cada asunto tiene un nombre y un teléfono directo</li>
+        </ul>
+      </div>
 
       <div class="team">
 
         <article class="lawyer" id="l-mrb">
           <div class="lawyer-head">
-            <div class="monogram" aria-hidden="true">mrb</div>
-            <h3 class="lawyer-name">mari carmen rodríguez baena</h3>
+            <div class="monogram" aria-hidden="true">MRB</div>
+            <div>
+              <h3 class="lawyer-name">Mari Carmen Rodríguez Baena</h3>
+              <p class="lawyer-role">Socia directora · Despido colectivo y reestructuraciones</p>
+            </div>
           </div>
-          <div class="lawyer-body">
-            <p class="lawyer-role">Socia directora · Despido colectivo y reestructuraciones</p>
-            <p class="lawyer-bio">Fundó el despacho en 2009 después de once años como asesora jurídica de una federación sindical del metal. Lleva los expedientes de regulación de empleo, los despidos objetivos por causas económicas y las extinciones por voluntad del trabajador cuando la empresa deja de pagar. Es quien pelea los periodos de consultas: conoce la coreografía completa, desde la primera acta hasta el acuerdo o la impugnación.</p>
-            <p class="lawyer-voice">«Un ERE no se gana el día de la vista. Se gana o se pierde en la documentación que pides en la primera reunión.»</p>
-            <ul class="facts">
-              <li>23 años de ejercicio</li>
-              <li>Arts. 51 y 52 ET</li>
-              <li>Periodo de consultas</li>
-              <li>Sevilla</li>
-            </ul>
-          </div>
+          <p class="lawyer-bio">Fundó el despacho en 2009 después de once años como asesora jurídica de una federación sindical del metal. Lleva los expedientes de regulación de empleo, los despidos objetivos por causas económicas y las extinciones por voluntad del trabajador cuando la empresa deja de pagar. Es quien pelea los periodos de consultas: conoce la coreografía completa, desde la primera acta hasta el acuerdo o la impugnación.</p>
+          <p class="lawyer-voice">«Un ERE no se gana el día de la vista. Se gana o se pierde en la documentación que pides en la primera reunión.»</p>
+          <ul class="facts">
+            <li>23 años de ejercicio</li>
+            <li>Arts. 51 y 52 ET</li>
+            <li>Periodo de consultas</li>
+            <li>Sevilla</li>
+          </ul>
         </article>
 
         <article class="lawyer" id="l-rg">
           <div class="lawyer-head">
-            <div class="monogram" aria-hidden="true">rg</div>
-            <h3 class="lawyer-name">roberto gismondo</h3>
+            <div class="monogram" aria-hidden="true">RG</div>
+            <div>
+              <h3 class="lawyer-name">Roberto Gismondo</h3>
+              <p class="lawyer-role">Socio · Movilidad internacional y derecho del trabajo italiano</p>
+            </div>
           </div>
-          <div class="lawyer-body">
-            <p class="lawyer-role">Socio · Movilidad internacional y derecho del trabajo italiano</p>
-            <p class="lawyer-bio">Napolitano, se licenció en Derecho en la Federico II y ejerció seis años en Nápoles antes de homologar su título en España. Es el único del despacho que puede trabajar el caso en las dos jurisdicciones: lleva los desplazamientos de trabajadores dentro de la Unión, los contratos sometidos a derecho italiano y las carreras de cotización repartidas entre el INSS y el INPS. Atiende en italiano y traduce él mismo la documentación en vez de mandarla fuera, porque, dice, el matiz se pierde en el envío.</p>
-            <p class="lawyer-voice">«Lo primero que pregunto no es qué te ha pasado, sino en qué país cotizabas cuando te pasó. De ahí cuelga todo lo demás.»</p>
-            <ul class="facts">
-              <li>16 años de ejercicio</li>
-              <li class="jur-it">Avvocato · Foro di Napoli</li>
-              <li class="jur-it">Reg. (CE) 883/2004</li>
-              <li class="jur-it">Statuto dei Lavoratori</li>
-              <li>Español · Italiano</li>
-            </ul>
-          </div>
+          <p class="lawyer-bio">Napolitano, se licenció en Derecho en la Federico II y ejerció seis años en Nápoles antes de homologar su título en España. Es el único del despacho que puede trabajar el caso en las dos jurisdicciones: lleva los desplazamientos de trabajadores dentro de la Unión, los contratos sometidos a derecho italiano y las carreras de cotización repartidas entre el INSS y el INPS. Atiende en italiano y traduce él mismo la documentación en vez de mandarla fuera, porque, dice, el matiz se pierde en el envío.</p>
+          <p class="lawyer-voice">«Lo primero que pregunto no es qué te ha pasado, sino en qué país cotizabas cuando te pasó. De ahí cuelga todo lo demás.»</p>
+          <ul class="facts">
+            <li>16 años de ejercicio</li>
+            <li class="jur-it">Avvocato · Foro di Napoli</li>
+            <li class="jur-it">Reg. (CE) 883/2004</li>
+            <li class="jur-it">Statuto dei Lavoratori</li>
+            <li>Español · Italiano</li>
+          </ul>
         </article>
 
         <article class="lawyer" id="l-tcm">
           <div class="lawyer-head">
-            <div class="monogram" aria-hidden="true">tcm</div>
-            <h3 class="lawyer-name">teresa claramunt moreno</h3>
+            <div class="monogram" aria-hidden="true">TCM</div>
+            <div>
+              <h3 class="lawyer-name">Teresa Claramunt Moreno</h3>
+              <p class="lawyer-role">Seguridad Social y prestaciones</p>
+            </div>
           </div>
-          <div class="lawyer-body">
-            <p class="lawyer-role">Seguridad Social y prestaciones</p>
-            <p class="lawyer-bio">Trabajó nueve años dentro del Instituto Nacional de la Seguridad Social antes de pasarse a la abogacía, y eso se nota en cómo prepara los asuntos: sabe qué mira exactamente el Equipo de Valoración de Incapacidades y qué informe médico sobra. Lleva incapacidad permanente, gran invalidez, jubilaciones con lagunas de cotización, viudedad de parejas de hecho y todas las reclamaciones previas del despacho.</p>
-            <p class="lawyer-voice">«La mayoría de las prestaciones no se deniegan por el fondo. Se deniegan por un plazo, y el plazo empieza a correr antes de que llegues aquí.»</p>
-            <ul class="facts">
-              <li>19 años de ejercicio</li>
-              <li>Ex-INSS</li>
-              <li>Arts. 193–200 LGSS</li>
-              <li>Reclamación previa</li>
-            </ul>
-          </div>
+          <p class="lawyer-bio">Trabajó nueve años dentro del Instituto Nacional de la Seguridad Social antes de pasarse a la abogacía, y eso se nota en cómo prepara los asuntos: sabe qué mira exactamente el Equipo de Valoración de Incapacidades y qué informe médico sobra. Lleva incapacidad permanente, gran invalidez, jubilaciones con lagunas de cotización, viudedad de parejas de hecho y todas las reclamaciones previas del despacho.</p>
+          <p class="lawyer-voice">«La mayoría de las prestaciones no se deniegan por el fondo. Se deniegan por un plazo, y el plazo empieza a correr antes de que llegues aquí.»</p>
+          <ul class="facts">
+            <li>19 años de ejercicio</li>
+            <li>Ex-INSS</li>
+            <li>Arts. 193–200 LGSS</li>
+            <li>Reclamación previa</li>
+          </ul>
         </article>
 
         <article class="lawyer" id="l-esp">
           <div class="lawyer-head">
-            <div class="monogram" aria-hidden="true">esp</div>
-            <h3 class="lawyer-name">eva maría sánchez paz</h3>
+            <div class="monogram" aria-hidden="true">ESP</div>
+            <div>
+              <h3 class="lawyer-name">Eva María Sánchez Paz</h3>
+              <p class="lawyer-role">Igualdad, acoso y derechos fundamentales</p>
+            </div>
           </div>
-          <div class="lawyer-body">
-            <p class="lawyer-role">Igualdad, acoso y derechos fundamentales</p>
-            <p class="lawyer-bio">Lleva el procedimiento de tutela de derechos fundamentales, que es el más rápido y el más exigente: hay que aportar indicios sólidos desde la demanda para que la carga de la prueba se invierta y sea la empresa la que tenga que justificarse. Trabaja despidos de trabajadoras embarazadas, represalias por reclamar, acoso sexual y por razón de sexo, y negocia planes de igualdad para empresas que prefieren prevenir. Acompaña a la clienta a declarar siempre, sin excepción.</p>
-            <p class="lawyer-voice">«Cuando alguien me dice “es que no tengo pruebas”, casi siempre las tiene. Lo que no tiene es a nadie que le haya dicho que un wasap es una prueba.»</p>
-            <ul class="facts">
-              <li>12 años de ejercicio</li>
-              <li>LO 3/2007</li>
-              <li>Nulidad del despido</li>
-              <li>Planes de igualdad</li>
-            </ul>
-          </div>
+          <p class="lawyer-bio">Lleva el procedimiento de tutela de derechos fundamentales, que es el más rápido y el más exigente: hay que aportar indicios sólidos desde la demanda para que la carga de la prueba se invierta y sea la empresa la que tenga que justificarse. Trabaja despidos de trabajadoras embarazadas, represalias por reclamar, acoso sexual y por razón de sexo, y negocia planes de igualdad para empresas que prefieren prevenir. Acompaña a la clienta a declarar siempre, sin excepción.</p>
+          <p class="lawyer-voice">«Cuando alguien me dice “es que no tengo pruebas”, casi siempre las tiene. Lo que no tiene es a nadie que le haya dicho que un wasap es una prueba.»</p>
+          <ul class="facts">
+            <li>12 años de ejercicio</li>
+            <li>LO 3/2007</li>
+            <li>Nulidad del despido</li>
+            <li>Planes de igualdad</li>
+          </ul>
         </article>
 
-        <article class="lawyer" id="l-pp">
+        <article class="lawyer" id="l-ped">
           <div class="lawyer-head">
-            <div class="monogram" aria-hidden="true">pp</div>
-            <h3 class="lawyer-name">paola pérez</h3>
+            <div class="monogram" aria-hidden="true">PED</div>
+            <div>
+              <h3 class="lawyer-name">Paola Escobar Díaz</h3>
+              <p class="lawyer-role">Negociación colectiva y derecho sindical</p>
+            </div>
           </div>
-          <div class="lawyer-body">
-            <p class="lawyer-role">Negociación colectiva y derecho sindical</p>
-            <p class="lawyer-bio">Veinte años sentada en mesas de negociación, primero como asesora de una federación de servicios y desde 2014 en el despacho. Asesora a comités de empresa y secciones sindicales: convenios, conflictos colectivos, impugnación de convenios, elecciones sindicales y servicios mínimos en huelga. Es la que mejor lee un convenio entero en una tarde y te señala el artículo que no cuadra con la ley.</p>
-            <p class="lawyer-voice">«Un convenio no es un texto legal, es el acta de una relación de fuerzas. Se interpreta sabiendo quién cedió qué.»</p>
-            <ul class="facts">
-              <li>21 años de ejercicio</li>
-              <li>Título III ET</li>
-              <li>Conflicto colectivo</li>
-              <li>Huelga y servicios mínimos</li>
-            </ul>
-          </div>
+          <p class="lawyer-bio">Veinte años sentada en mesas de negociación, primero como asesora de una federación de servicios y desde 2014 en el despacho. Asesora a comités de empresa y secciones sindicales: convenios, conflictos colectivos, impugnación de convenios, elecciones sindicales y servicios mínimos en huelga. Es la que mejor lee un convenio entero en una tarde y te señala el artículo que no cuadra con la ley.</p>
+          <p class="lawyer-voice">«Un convenio no es un texto legal, es el acta de una relación de fuerzas. Se interpreta sabiendo quién cedió qué.»</p>
+          <ul class="facts">
+            <li>21 años de ejercicio</li>
+            <li>Título III ET</li>
+            <li>Conflicto colectivo</li>
+            <li>Huelga y servicios mínimos</li>
+          </ul>
         </article>
 
         <article class="lawyer" id="l-adl">
           <div class="lawyer-head">
-            <div class="monogram" aria-hidden="true">adl</div>
-            <h3 class="lawyer-name">amanda díaz lópez</h3>
+            <div class="monogram" aria-hidden="true">ADL</div>
+            <div>
+              <h3 class="lawyer-name">Amanda Díaz López</h3>
+              <p class="lawyer-role">Accidente de trabajo y enfermedad profesional</p>
+            </div>
           </div>
-          <div class="lawyer-body">
-            <p class="lawyer-role">Accidente de trabajo y enfermedad profesional</p>
-            <p class="lawyer-bio">Fue técnica superior en prevención de riesgos laborales durante seis años antes de terminar Derecho, y sigue visitando el centro de trabajo cuando el caso lo pide. Lleva la determinación de contingencia cuando la mutua dice «enfermedad común» y era accidente, el recargo de prestaciones por falta de medidas de seguridad y la reclamación de daños y perjuicios. Tiene especial recorrido en camareras de piso, limpieza y agroindustria.</p>
-            <p class="lawyer-voice">«El recargo lo paga la empresa de su bolsillo y no se puede asegurar. Por eso se defiende con tanta fuerza, y por eso hay que probarlo tan bien.»</p>
-            <ul class="facts">
-              <li>14 años de ejercicio</li>
-              <li>Técnica superior en PRL</li>
-              <li>Art. 164 LGSS · recargo</li>
-              <li>Ley 31/1995</li>
-            </ul>
-          </div>
+          <p class="lawyer-bio">Fue técnica superior en prevención de riesgos laborales durante seis años antes de terminar Derecho, y sigue visitando el centro de trabajo cuando el caso lo pide. Lleva la determinación de contingencia cuando la mutua dice «enfermedad común» y era accidente, el recargo de prestaciones por falta de medidas de seguridad y la reclamación de daños y perjuicios. Tiene especial recorrido en camareras de piso, limpieza y agroindustria.</p>
+          <p class="lawyer-voice">«El recargo lo paga la empresa de su bolsillo y no se puede asegurar. Por eso se defiende con tanta fuerza, y por eso hay que probarlo tan bien.»</p>
+          <ul class="facts">
+            <li>14 años de ejercicio</li>
+            <li>Técnica superior en PRL</li>
+            <li>Art. 164 LGSS · recargo</li>
+            <li>Ley 31/1995</li>
+          </ul>
         </article>
 
         <article class="lawyer" id="l-dbe">
           <div class="lawyer-head">
-            <div class="monogram" aria-hidden="true">dbe</div>
-            <h3 class="lawyer-name">daniel berrio echeverría</h3>
+            <div class="monogram" aria-hidden="true">DBE</div>
+            <div>
+              <h3 class="lawyer-name">Daniel Berrio Echeverría</h3>
+              <p class="lawyer-role">Plataformas digitales, falsos autónomos y nuevas formas de empleo</p>
+            </div>
           </div>
-          <div class="lawyer-body">
-            <p class="lawyer-role">Plataformas digitales, falsos autónomos y nuevas formas de empleo</p>
-            <p class="lawyer-bio">El más joven del equipo y el que más pisa la calle. Se ocupa de todo lo que discute si hay o no relación laboral: repartidores y conductores de plataforma, autónomos económicamente dependientes, becarios que hacen el trabajo de una plantilla, contratos por obra encadenados. Su herramienta es siempre la misma, aunque cambie el sector: probar ajenidad y dependencia con lo que la propia app registra.</p>
-            <p class="lawyer-voice">«Nadie llama “empleado” a un rider. Pero si la aplicación te dice cuándo, cómo y por cuánto trabajas, ya sabemos lo que eres.»</p>
-            <ul class="facts">
-              <li>7 años de ejercicio</li>
-              <li>Art. 1 y 8.1 ET</li>
-              <li>Ley 12/2021 · ley rider</li>
-              <li>TRADE</li>
-            </ul>
-          </div>
+          <p class="lawyer-bio">El más joven del equipo y el que más pisa la calle. Se ocupa de todo lo que discute si hay o no relación laboral: repartidores y conductores de plataforma, autónomos económicamente dependientes, becarios que hacen el trabajo de una plantilla, contratos por obra encadenados. Su herramienta es siempre la misma, aunque cambie el sector: probar ajenidad y dependencia con lo que la propia app registra.</p>
+          <p class="lawyer-voice">«Nadie llama “empleado” a un <i>rider</i>. Pero si la aplicación te dice cuándo, cómo y por cuánto trabajas, ya sabemos lo que eres.»</p>
+          <ul class="facts">
+            <li>7 años de ejercicio</li>
+            <li>Arts. 1 y 8.1 ET</li>
+            <li>Ley 12/2021 · «ley <i>rider</i>»</li>
+            <li>TRADE</li>
+          </ul>
         </article>
 
         <article class="lawyer" id="l-art">
           <div class="lawyer-head">
-            <div class="monogram" aria-hidden="true">art</div>
-            <h3 class="lawyer-name">alba ruiz tejero</h3>
+            <div class="monogram" aria-hidden="true">ART</div>
+            <div>
+              <h3 class="lawyer-name">Alba Ruiz Tejero</h3>
+              <p class="lawyer-role">Teletrabajo, control empresarial y datos del trabajador</p>
+            </div>
           </div>
-          <div class="lawyer-body">
-            <p class="lawyer-role">Teletrabajo, control empresarial y datos del trabajador</p>
-            <p class="lawyer-bio">Llegó al despacho desde el derecho de protección de datos y montó el área cuando el teletrabajo dejó de ser una excepción. Lleva acuerdos de trabajo a distancia, compensación de gastos, desconexión digital, y los casos en que la empresa se ha excedido vigilando: correo corporativo, geolocalización, cámaras sin informar, control por software. También revisa los sistemas de selección y evaluación que funcionan con algoritmos, porque un criterio automático puede discriminar sin que nadie lo haya decidido.</p>
-            <p class="lawyer-voice">«La empresa puede controlar el trabajo. No puede controlar a la persona. Todo mi trabajo consiste en dibujar esa raya, caso por caso.»</p>
-            <ul class="facts">
-              <li>11 años de ejercicio</li>
-              <li>Art. 20 bis ET</li>
-              <li>RDL 28/2020</li>
-              <li>Art. 87–91 LOPDGDD</li>
-            </ul>
-          </div>
+          <p class="lawyer-bio">Llegó al despacho desde el derecho de protección de datos y montó el área cuando el teletrabajo dejó de ser una excepción. Lleva acuerdos de trabajo a distancia, compensación de gastos, desconexión digital, y los casos en que la empresa se ha excedido vigilando: correo corporativo, geolocalización, cámaras sin informar, control por software. También revisa los sistemas de selección y evaluación que funcionan con algoritmos, porque un criterio automático puede discriminar sin que nadie lo haya decidido.</p>
+          <p class="lawyer-voice">«La empresa puede controlar el trabajo. No puede controlar a la persona. Todo mi trabajo consiste en dibujar esa raya, caso por caso.»</p>
+          <ul class="facts">
+            <li>11 años de ejercicio</li>
+            <li>Art. 20 bis ET</li>
+            <li>RDL 28/2020</li>
+            <li>Arts. 87–91 LOPDGDD</li>
+          </ul>
         </article>
 
       </div>
@@ -1160,106 +1158,118 @@
   </section>
 
   <!-- ================= ESPAÑA · ITALIA ================= -->
-  <section class="band" id="espana-italia">
-    <div class="rail">
-      <span class="tag">Doble jurisdicción</span>
-      <p>Reglamento (CE) 883/2004 — coordinación de los sistemas de Seguridad Social</p>
-      <p>Directiva 96/71/CE y 2018/957 — desplazamiento de trabajadores</p>
-      <p class="it">D.Lgs. 4 marzo 2015, n. 23 — contratto a tutele crescenti</p>
-    </div>
-    <div class="flow">
-      <h2>Dos países, una carrera profesional</h2>
-      <p class="lede">Cada vez más clientes tienen la vida laboral partida: unos años cotizados en España, otros en Italia, y una empresa que aprovecha la costura entre ambos. <mark>Ahí no basta con traducir: hay que saber las dos leyes.</mark></p>
-      <p>Roberto lleva estos asuntos de principio a fin y se apoya en Teresa para la parte de cotizaciones. Lo primero que hacemos es reconstruir dónde estabas dado de alta en cada momento, porque eso determina qué ley se aplica y ante qué juzgado se reclama.</p>
-
-      <div class="bridge">
-        <h3>Lo que cambia de un lado al otro de la frontera</h3>
-        <div class="bridge-grid">
-          <div class="bridge-col">
-            <h4>España</h4>
-            <ul>
-              <li>Despido improcedente: readmisión o indemnización, y elige la empresa.
-                <code>art. 56 ET · 33 días por año</code></li>
-              <li>Despido nulo si vulnera un derecho fundamental: readmisión obligatoria y salarios de tramitación.
-                <code>art. 55.5 ET · art. 108 LRJS</code></li>
-              <li>Antes de demandar, conciliación administrativa previa.
-                <code>art. 63 LRJS</code></li>
-              <li>Prestaciones: reclamación previa ante el INSS antes del juzgado.
-                <code>art. 71 LRJS</code></li>
-            </ul>
-          </div>
-          <div class="bridge-col">
-            <h4>Italia</h4>
-            <ul>
-              <li>El despido debe tener <i>giusta causa</i> o <i>giustificato motivo</i>; si no, es ilegítimo.
-                <code>L. 604/1966 · art. 2119 Codice Civile</code></li>
-              <li>Para los contratados desde 2015, la regla general es indemnización creciente con la antigüedad, no reincorporación.
-                <code>D.Lgs. 23/2015 · tutele crescenti</code></li>
-              <li>La reincorporación sobrevive en los casos más graves: despido discriminatorio o nulo.
-                <code>art. 18 L. 300/1970 · Statuto dei Lavoratori</code></li>
-              <li>Impugnación en 60 días y demanda en los 180 siguientes: plazos muy cortos.
-                <code>L. 92/2012, art. 1, co. 38</code></li>
-            </ul>
-          </div>
+  <section class="section" id="espana-italia">
+    <div class="container">
+      <div class="intro-grid">
+        <div class="section-head">
+          <span class="eyebrow">Doble jurisdicción</span>
+          <h2>Dos países, una carrera profesional</h2>
+          <p class="lede">Cada vez más clientes tienen la vida laboral partida: unos años cotizados en España, otros en Italia, y una empresa que aprovecha la costura entre ambos. Ahí no basta con traducir: hay que saber las dos leyes.</p>
+        </div>
+        <div class="flow">
+          <p>Roberto lleva estos asuntos de principio a fin y se apoya en Teresa para la parte de cotizaciones. Lo primero que hacemos es reconstruir dónde estabas dado de alta en cada momento, porque eso determina qué ley se aplica y ante qué juzgado se reclama.</p>
         </div>
       </div>
+
+      <h3 class="compare-title">Lo que cambia de un lado al otro de la frontera</h3>
+      <div class="compare">
+        <div class="compare-col">
+          <h3>España</h3>
+          <ul>
+            <li>Despido improcedente: readmisión o indemnización, y elige la empresa.
+              <span class="ref">art. 56 ET · 33 días por año</span></li>
+            <li>Despido nulo si vulnera un derecho fundamental: readmisión obligatoria y salarios de tramitación.
+              <span class="ref">art. 55.5 ET · art. 108 LRJS</span></li>
+            <li>Antes de demandar, conciliación administrativa previa.
+              <span class="ref">art. 63 LRJS</span></li>
+            <li>Prestaciones: reclamación previa ante el INSS antes del juzgado.
+              <span class="ref">art. 71 LRJS</span></li>
+          </ul>
+        </div>
+        <div class="compare-col">
+          <h3>Italia</h3>
+          <ul>
+            <li>El despido debe tener <i>giusta causa</i> o <i>giustificato motivo</i>; si no, es ilegítimo.
+              <span class="ref">L. 604/1966 · art. 2119 Codice Civile</span></li>
+            <li>Para los contratados desde 2015, la regla general es indemnización creciente con la antigüedad, no reincorporación.
+              <span class="ref">D.Lgs. 23/2015 · tutele crescenti</span></li>
+            <li>La reincorporación sobrevive en los casos más graves: despido discriminatorio o nulo.
+              <span class="ref">art. 18 L. 300/1970 · Statuto dei Lavoratori</span></li>
+            <li>Impugnación en 60 días y demanda en los 180 siguientes: plazos muy cortos.
+              <span class="ref">L. 92/2012, art. 1, co. 38</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <aside class="norms">
+        <h3>Normativa aplicable</h3>
+        <ul>
+          <li>Reglamento (CE) 883/2004 — coordinación de los sistemas de Seguridad Social</li>
+          <li>Directivas 96/71/CE y 2018/957 — desplazamiento de trabajadores</li>
+          <li>D.Lgs. 4 marzo 2015, n. 23 — <i>contratto a tutele crescenti</i></li>
+        </ul>
+      </aside>
     </div>
   </section>
 
   <!-- ================= CASOS Y OPINIONES ================= -->
-  <section class="band" id="casos">
-    <div class="rail">
-      <span class="tag">Lo que dicen</span>
-      <p>Seis asuntos cerrados con resolución favorable entre 2023 y 2025.</p>
-      <p>Publicados con autorización de cada cliente y con los nombres abreviados.</p>
-      <p class="it">Casos simulados: ver aviso al pie.</p>
-    </div>
-    <div class="flow">
-      <h2>Casos que salieron bien</h2>
-      <p class="lede">No ganamos todos. Estos los ganamos, y los contamos con el detalle jurídico porque entender por qué se ganó es parte del servicio.</p>
+  <section class="section section-alt" id="casos">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Lo que dicen nuestros clientes</span>
+        <h2>Casos que salieron bien</h2>
+        <p class="lede">No ganamos todos. Estos los ganamos, y los contamos con el detalle jurídico porque entender por qué se ganó es parte del servicio.</p>
+        <p class="note">Seis asuntos cerrados con resolución favorable entre 2023 y 2025, publicados con autorización de cada cliente y con los nombres abreviados. Casos simulados: ver aviso al pie.</p>
+      </div>
 
       <div class="cases">
 
         <div class="case">
-          <blockquote>«Llevaba dieciocho años haciendo habitaciones y la mutua decía que mi hombro era cosa de la edad. Amanda se vino al hotel, contó cuántas camas hacía yo en un turno y lo puso en un papel. Cuando lo leyó el juez, ya no había discusión.»</blockquote>
-          <p class="case-who">Dolores M. · camarera de piso, Sevilla</p>
+          <blockquote>Llevaba dieciocho años haciendo habitaciones y la mutua decía que mi hombro era cosa de la edad. Amanda se vino al hotel, contó cuántas camas hacía yo en un turno y lo puso en un papel. Cuando lo leyó el juez, ya no había discusión.</blockquote>
+          <p class="case-who">Dolores M.</p>
+          <p class="case-where">Camarera de piso, Sevilla</p>
           <p class="case-what">Contingencia común convertida en enfermedad profesional y reconocimiento de incapacidad permanente total.</p>
-          <p class="case-file"><b>Abogada:</b> amanda díaz lópez<br><b>Materia:</b> determinación de contingencia · art. 157 LGSS<br><b>Resultado:</b> estimada íntegramente, 2024</p>
+          <p class="case-file"><b>Abogada:</b> Amanda Díaz López<br><b>Materia:</b> determinación de contingencia · art. 157 LGSS<br><b>Resultado:</b> estimada íntegramente, 2024</p>
         </div>
 
         <div class="case">
-          <blockquote>«Comuniqué que estaba embarazada un lunes y el viernes me despidieron “por bajo rendimiento”. Eva me pidió los correos de los seis meses anteriores, donde me felicitaban por los resultados. No hizo falta más.»</blockquote>
-          <p class="case-who">Ana Belén M. · técnica comercial, Dos Hermanas</p>
+          <blockquote>Comuniqué que estaba embarazada un lunes y el viernes me despidieron “por bajo rendimiento”. Eva me pidió los correos de los seis meses anteriores, donde me felicitaban por los resultados. No hizo falta más.</blockquote>
+          <p class="case-who">Ana Belén M.</p>
+          <p class="case-where">Técnica comercial, Dos Hermanas</p>
           <p class="case-what">Despido declarado nulo por discriminación por razón de sexo, con readmisión, salarios de tramitación e indemnización adicional por daño moral.</p>
-          <p class="case-file"><b>Abogada:</b> eva maría sánchez paz<br><b>Materia:</b> tutela de derechos fundamentales · art. 55.5 b) ET<br><b>Resultado:</b> nulidad y readmisión, 2025</p>
+          <p class="case-file"><b>Abogada:</b> Eva María Sánchez Paz<br><b>Materia:</b> tutela de derechos fundamentales · art. 55.5 b) ET<br><b>Resultado:</b> nulidad y readmisión, 2025</p>
         </div>
 
         <div class="case">
-          <blockquote>«Mi empresa me mandó de Milán a Sevilla ocho meses y me pagaba el salario italiano, pero me descontaba como si fuera de aquí. Roberto me lo explicó en italiano en veinte minutos, que era lo que llevaba un año sin entender.»</blockquote>
-          <p class="case-who">Salvatore D. · técnico de mantenimiento industrial, Milán / Sevilla</p>
+          <blockquote>Mi empresa me mandó de Milán a Sevilla ocho meses y me pagaba el salario italiano, pero me descontaba como si fuera de aquí. Roberto me lo explicó en italiano en veinte minutos, que era lo que llevaba un año sin entender.</blockquote>
+          <p class="case-who">Salvatore D.</p>
+          <p class="case-where">Técnico de mantenimiento industrial, Milán / Sevilla</p>
           <p class="case-what">Trabajador desplazado: se le reconoció el derecho a las condiciones salariales del convenio español aplicable durante el desplazamiento, con abono de diferencias.</p>
-          <p class="case-file"><b>Abogado:</b> roberto gismondo<br><b>Materia:</b> desplazamiento transnacional · Directiva 2018/957 y Ley 45/1999<br><b>Resultado:</b> acuerdo antes de juicio, 2024</p>
+          <p class="case-file"><b>Abogado:</b> Roberto Gismondo<br><b>Materia:</b> desplazamiento transnacional · Directiva 2018/957 y Ley 45/1999<br><b>Resultado:</b> acuerdo antes de juicio, 2024</p>
         </div>
 
         <div class="case">
-          <blockquote>«Nos plantaron un ERE de 140 personas en agosto. Mari Carmen y Paola pidieron las cuentas de las tres filiales, no solo las de la nuestra. Ahí apareció que el grupo ganaba dinero. Salimos con 58 despidos y recolocación.»</blockquote>
-          <p class="case-who">Comité de empresa · industria auxiliar del automóvil, Andalucía</p>
+          <blockquote>Nos plantaron un ERE de 140 personas en agosto. Mari Carmen y Paola pidieron las cuentas de las tres filiales, no solo las de la nuestra. Ahí apareció que el grupo ganaba dinero. Salimos con 58 despidos y recolocación.</blockquote>
+          <p class="case-who">Comité de empresa</p>
+          <p class="case-where">Industria auxiliar del automóvil, Andalucía</p>
           <p class="case-what">Periodo de consultas con solicitud de documentación consolidada del grupo; acuerdo con reducción del 59 % de las extinciones y plan de recolocación.</p>
-          <p class="case-file"><b>Abogadas:</b> mari carmen rodríguez baena · paola pérez<br><b>Materia:</b> despido colectivo · art. 51 ET<br><b>Resultado:</b> acuerdo en periodo de consultas, 2023</p>
+          <p class="case-file"><b>Abogadas:</b> Mari Carmen Rodríguez Baena · Paola Escobar Díaz<br><b>Materia:</b> despido colectivo · art. 51 ET<br><b>Resultado:</b> acuerdo en periodo de consultas, 2023</p>
         </div>
 
         <div class="case">
-          <blockquote>«Teletrabajaba y me instalaron un programa que hacía capturas de mi pantalla cada cinco minutos. Nadie me avisó. Alba me dijo la primera tarde que eso no se podía hacer así, y tenía razón.»</blockquote>
-          <p class="case-who">Lucía T. · administrativa, sector seguros</p>
+          <blockquote>Teletrabajaba y me instalaron un programa que hacía capturas de mi pantalla cada cinco minutos. Nadie me avisó. Alba me dijo la primera tarde que eso no se podía hacer así, y tenía razón.</blockquote>
+          <p class="case-who">Lucía T.</p>
+          <p class="case-where">Administrativa, sector seguros</p>
           <p class="case-what">Control empresarial declarado ilícito por falta de información previa; nulidad de la sanción impuesta con esas pruebas e indemnización por vulneración de la intimidad.</p>
-          <p class="case-file"><b>Abogada:</b> alba ruiz tejero<br><b>Materia:</b> control y datos del trabajador · art. 20.3 ET y art. 87 LOPDGDD<br><b>Resultado:</b> estimada, 2025</p>
+          <p class="case-file"><b>Abogada:</b> Alba Ruiz Tejero<br><b>Materia:</b> control y datos del trabajador · art. 20.3 ET y art. 87 LOPDGDD<br><b>Resultado:</b> estimada, 2025</p>
         </div>
 
         <div class="case">
-          <blockquote>«Trabajé once años en Turín y veintidós aquí, y el INSS me calculaba la pensión como si Italia no existiera. Teresa y Roberto reconstruyeron las dos vidas laborales. La diferencia son 312 euros al mes, para siempre.»</blockquote>
-          <p class="case-who">Elisa F. · jubilada, Utrera</p>
-          <p class="case-what">Totalización de periodos cotizados en dos Estados miembros y recálculo de la pensión de jubilación en prorrata temporis.</p>
-          <p class="case-file"><b>Abogados:</b> teresa claramunt moreno · roberto gismondo<br><b>Materia:</b> coordinación UE · Reglamento (CE) 883/2004<br><b>Resultado:</b> estimada la reclamación previa, 2024</p>
+          <blockquote>Trabajé once años en Turín y veintidós aquí, y el INSS me calculaba la pensión como si Italia no existiera. Teresa y Roberto reconstruyeron las dos vidas laborales. La diferencia son 312 euros al mes, para siempre.</blockquote>
+          <p class="case-who">Elisa F.</p>
+          <p class="case-where">Jubilada, Utrera</p>
+          <p class="case-what">Totalización de periodos cotizados en dos Estados miembros y recálculo de la pensión de jubilación <i>pro rata temporis</i>.</p>
+          <p class="case-file"><b>Abogados:</b> Teresa Claramunt Moreno · Roberto Gismondo<br><b>Materia:</b> coordinación UE · Reglamento (CE) 883/2004<br><b>Resultado:</b> estimada la reclamación previa, 2024</p>
         </div>
 
       </div>
@@ -1267,78 +1277,95 @@
   </section>
 
   <!-- ================= CÓMO TRABAJAMOS ================= -->
-  <section class="band" id="como">
-    <div class="rail">
-      <span class="tag">Plazos que corren solos</span>
-      <p>Despido: 20 días hábiles para demandar.</p>
-      <p>Reclamación de cantidad: 1 año.</p>
-      <p>Prestaciones: 30 días para la reclamación previa.</p>
-      <p class="it">Italia — despido: 60 días para impugnar.</p>
-    </div>
-    <div class="flow">
-      <h2>Cómo trabajamos contigo</h2>
-      <p class="lede">Cuatro pasos y ninguna sorpresa en la factura. Si el asunto no tiene recorrido, te lo decimos en el paso uno y no te cobramos por escucharte.</p>
+  <section class="section" id="como">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Cómo trabajamos</span>
+        <h2>Cómo trabajamos contigo</h2>
+        <p class="lede">Cuatro pasos y ninguna sorpresa en la factura. Si el asunto no tiene recorrido, te lo decimos en el paso uno y no te cobramos por escucharte.</p>
+      </div>
+
       <ol class="steps">
         <li><b>Nos traes el papel</b><span>La carta, el contrato, la nómina o la resolución. Media hora, sin coste y sin compromiso. Salimos de ahí con un diagnóstico en lenguaje normal.</span></li>
         <li><b>Te decimos qué se puede hacer y cuánto cuesta</b><span>Por escrito: opciones, plazos, probabilidad razonable y presupuesto cerrado. Si procede justicia gratuita, te ayudamos a solicitarla.</span></li>
         <li><b>Intentamos evitarte el juzgado</b><span>Conciliación, reclamación previa o negociación directa. Casi la mitad de nuestros asuntos se cierran aquí, antes y mejor.</span></li>
         <li><b>Si hay que ir a juicio, vamos contigo</b><span>Preparamos tu declaración contigo el día antes. A la vista te acompaña quien lleva tu caso desde el principio, no un compañero que lo leyó esa mañana.</span></li>
       </ol>
+
+      <aside class="norms">
+        <h3>Plazos que corren solos</h3>
+        <ul>
+          <li>Despido: 20 días hábiles para demandar.</li>
+          <li>Reclamación de cantidad: 1 año.</li>
+          <li>Prestaciones: 30 días para la reclamación previa.</li>
+          <li>Italia — despido: 60 días para impugnar.</li>
+        </ul>
+      </aside>
     </div>
   </section>
 
   <!-- ================= CONTACTO ================= -->
-  <section class="band" id="contacto">
-    <div class="rail">
-      <span class="tag">Dónde estamos</span>
-      <p>Planta baja, sin escalones.</p>
-      <p>Parada de tranvía a 120 m.</p>
-      <p>Citas fuera de horario si trabajas a turnos.</p>
-    </div>
-    <div class="flow">
-      <h2>Hablamos cuando puedas</h2>
-      <p class="lede">Contamos con que tú también tienes un trabajo. Si no puedes venir en horario de oficina, dilo y buscamos hueco.</p>
-
-      <div class="actions">
-        <a class="btn btn-primary" href="tel:+34954000000">Llamar al 954 00 00 00</a>
-        <a class="btn btn-ghost" href="mailto:hola@laletrapequena.es">Escribir un correo</a>
+  <section class="section section-alt" id="contacto">
+    <div class="container contact">
+      <div>
+        <div class="section-head">
+          <span class="eyebrow">Contacto</span>
+          <h2>Hablamos cuando puedas</h2>
+          <p class="lede">Contamos con que tú también tienes un trabajo. Si no puedes venir en horario de oficina, dilo y buscamos hueco.</p>
+        </div>
+        <div class="actions">
+          <a class="btn btn-navy" href="tel:+34954000000">Llamar al 954 00 00 00</a>
+          <a class="btn btn-outline" href="mailto:hola@laletrapequena.es">Escribir un correo</a>
+        </div>
+        <ul class="access">
+          <li>Planta baja, sin escalones.</li>
+          <li>Parada de tranvía a 120 m.</li>
+          <li>Citas fuera de horario si trabajas a turnos.</li>
+        </ul>
       </div>
 
-      <div class="contact-grid">
-        <div>
-          <h4>Despacho</h4>
+      <div class="contact-cards">
+        <div class="contact-card">
+          <h3>Despacho</h3>
           <p>Calle Alfonso XII, 34, bajo<br>41002 Sevilla</p>
         </div>
-        <div>
-          <h4>Teléfono</h4>
+        <div class="contact-card">
+          <h3>Teléfono</h3>
           <p>954 00 00 00<br>WhatsApp 600 00 00 00</p>
         </div>
-        <div>
-          <h4>Correo</h4>
+        <div class="contact-card">
+          <h3>Correo</h3>
           <p><a href="mailto:hola@laletrapequena.es">hola@laletrapequena.es</a><br><a href="mailto:italia@laletrapequena.es">italia@laletrapequena.es</a></p>
         </div>
-        <div>
-          <h4>Horario</h4>
+        <div class="contact-card">
+          <h3>Horario</h3>
           <p>Lunes a jueves, 9:00–18:00<br>Viernes, 9:00–15:00</p>
         </div>
       </div>
     </div>
   </section>
 
-  <footer>
+</main>
+
+<footer class="site-footer">
+  <div class="container">
+    <span class="brand footer-brand">
+      <span class="brand-name">La letra pequeña</span>
+      <span class="brand-sub">Abogados del trabajo y de la Seguridad Social</span>
+    </span>
     <p class="disclaimer">
-      AVISO · Esta página es un trabajo académico para la asignatura de Derecho del Trabajo y de la Seguridad Social.
-      El despacho «la letra pequeña» no existe. Los ocho profesionales, los clientes, los casos, las opiniones y los
+      <strong>AVISO</strong> · Esta página es un trabajo académico para la asignatura de Derecho del Trabajo y de la Seguridad Social.
+      El despacho «La letra pequeña» no existe. Los ocho profesionales, los clientes, los casos, las opiniones y los
       datos de contacto son ficticios y no representan a ninguna persona ni entidad real. Las normas citadas —españolas,
       italianas y de la Unión Europea— sí son reales, y se incluyen únicamente con finalidad docente. Nada de lo
       publicado aquí constituye asesoramiento jurídico.
     </p>
     <div class="foot-row">
-      <span>la letra pequeña · abogados del trabajo y de la seguridad social</span>
+      <span>La letra pequeña · Abogados del trabajo y de la Seguridad Social</span>
       <span>Curso 2025/2026 · Ejercicio de simulación profesional</span>
     </div>
-  </footer>
+  </div>
+</footer>
 
-</div>
 </body>
 </html>

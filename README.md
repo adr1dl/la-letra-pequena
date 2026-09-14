@@ -1,4 +1,4 @@
-# la letra pequeña
+# La letra pequeña
 
 Web de una **consultoría de abogados laboralistas** ficticia, creada como trabajo para la asignatura de **Derecho del Trabajo y de la Seguridad Social**.
 
@@ -55,7 +55,7 @@ Si te la piden impresa o en PDF:
 1. Abre la página por cualquiera de las tres vías de arriba.
 2. Pulsa **Ctrl + P** (o **Cmd + P** en Mac).
 3. En **Destino**, elige **Guardar como PDF**.
-4. Activa la casilla **Gráficos de fondo** (en Chrome está dentro de *Más ajustes*), o los subrayados amarillos y los recuadros no saldrán.
+4. Activa la casilla **Gráficos de fondo** (en Chrome está dentro de *Más ajustes*), o los recuadros y los filetes dorados no saldrán.
 
 ---
 
@@ -70,7 +70,7 @@ Si te la piden impresa o en PDF:
 
 ## 🏛️ Qué contiene la web
 
-- **Portada** con el nombre y la idea del despacho.
+- **Portada** con el lema del despacho y la cláusula de contrato que explica el nombre, seguida de una franja con los datos clave.
 - **El despacho** — quiénes son y las ocho áreas de trabajo.
 - **Equipo** — los ocho profesionales: **seis abogadas y dos abogados**, siete españoles y uno italiano. Cada ficha lleva especialidad, años de ejercicio, una biografía con un rasgo propio y una frase suya.
 - **España · Italia** — tabla que compara cómo resuelven las dos jurisdicciones el mismo problema: despido injustificado, reincorporación al puesto y plazos para reclamar.
@@ -82,27 +82,26 @@ Si te la piden impresa o en PDF:
 
 | | Especialidad |
 |---|---|
-| **mari carmen rodríguez baena** | Socia directora · Despido colectivo y reestructuraciones |
-| **roberto gismondo** | Socio · Movilidad internacional y derecho del trabajo italiano |
-| **teresa claramunt moreno** | Seguridad Social y prestaciones |
-| **eva maría sánchez paz** | Igualdad, acoso y derechos fundamentales |
-| **paola pérez** | Negociación colectiva y derecho sindical |
-| **amanda díaz lópez** | Accidente de trabajo y enfermedad profesional |
-| **daniel berrio echeverría** | Plataformas digitales y falsos autónomos |
-| **alba ruiz tejero** | Teletrabajo, control empresarial y datos del trabajador |
+| **Mari Carmen Rodríguez Baena** | Socia directora · Despido colectivo y reestructuraciones |
+| **Roberto Gismondo** | Socio · Movilidad internacional y derecho del trabajo italiano |
+| **Teresa Claramunt Moreno** | Seguridad Social y prestaciones |
+| **Eva María Sánchez Paz** | Igualdad, acoso y derechos fundamentales |
+| **Paola Escobar Díaz** | Negociación colectiva y derecho sindical |
+| **Amanda Díaz López** | Accidente de trabajo y enfermedad profesional |
+| **Daniel Berrio Echeverría** | Plataformas digitales y falsos autónomos |
+| **Alba Ruiz Tejero** | Teletrabajo, control empresarial y datos del trabajador |
 
 ---
 
 ## 🎨 Las decisiones de diseño, por si te preguntan
 
-- **La tipografía es la del oficio.** Títulos y citas en **EB Garamond**, la letra con la que se imprime el libro jurídico europeo; la prosa en **Alegreya Sans**, humanista y pensada para leer seguido; y los cargos, el menú y las etiquetas en **versalitas**, el recurso clásico del documento legal.
-- **El nombre es el argumento.** «la letra pequeña» es lo que nadie lee del contrato y lo que acaba decidiendo el caso. Va escrito en minúscula, y en la portada el subtítulo está escrito **literalmente en letra pequeña**.
-- **La página está maquetada como un contrato anotado a mano.** A la izquierda de cada sección hay una columna estrecha en tipografía de máquina de escribir con las normas aplicables —artículo 51 del Estatuto de los Trabajadores, Reglamento (CE) 883/2004, *Codice Civile*…—: son las notas al margen. Las frases importantes llevan un **subrayado amarillo de marcador**.
+- **Aspecto de bufete clásico.** Tema claro, fondo blanco y crema, y la paleta más habitual del sector: **azul marino** para la seriedad (portada, pie y botones) y **dorado mate** como acento (filetes, cifras e iniciales). Es lo que un cliente espera ver en la web de un despacho, y eso da confianza antes de leer nada.
+- **La tipografía es la del oficio.** Títulos y citas en **EB Garamond**, la letra con la que se imprime el libro jurídico europeo; el texto en **Source Sans 3**, una letra neutra y muy legible en pantalla.
+- **El nombre se explica en la portada.** «La letra pequeña» es lo que nadie lee del contrato y lo que acaba decidiendo el caso. Por eso, al lado del lema, hay un fragmento de contrato con la letra diminuta y la cláusula abusiva marcada en dorado, con la nota *«A esto no se puede renunciar. Y es la línea que nadie lee.»*
+- **La normativa, a la vista.** Cada sección cierra con un recuadro de **normativa aplicable** —Estatuto de los Trabajadores, Reglamento (CE) 883/2004, *Codice Civile*…— y la de «Cómo trabajamos» con los **plazos que corren solos**.
 - **No hay fotos de los abogados**, solo un recuadro con sus iniciales. Es una decisión honesta: el despacho no existe, así que no se le ponen caras reales a personas inventadas.
-- **La portada enseña una cláusula de contrato de verdad**, con la letra diminuta que nadie lee y la parte abusiva subrayada a marcador, anotada a mano al margen. Es el concepto del despacho, dibujado.
-- **Se adapta al móvil** de verdad: no encoge la página, la reorganiza. Las notas al margen pasan a ser un recuadro dentro del texto, las fichas ponen las iniciales al lado del nombre en vez de encima, y el menú se desliza en horizontal en lugar de amontonarse.
-- **Modo claro y modo oscuro**: si el ordenador o el teléfono está en tema oscuro, la página se muestra en tinta clara sobre fondo oscuro sin que haya que tocar nada.
-- **Preparada para imprimir**: al guardarla en PDF se quitan el menú y los botones, y ninguna ficha de abogado se parte entre dos páginas.
+- **Se adapta al móvil** de verdad: no encoge la página, la reorganiza. Las tarjetas pasan a una columna, los pasos se apilan y el menú se desliza en horizontal en lugar de amontonarse.
+- **Preparada para imprimir**: al guardarla en PDF se quitan el menú y los botones, las bandas de color pasan a fondo blanco y ninguna ficha se parte entre dos páginas.
 
 ---
 
